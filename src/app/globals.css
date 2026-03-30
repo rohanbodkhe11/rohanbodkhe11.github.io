@@ -1,0 +1,102 @@
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 33% 2%;
+    --foreground: 210 40% 98%;
+    --card: 222 47% 7%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222 47% 7%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 191 100% 50%; /* Neon Cyan */
+    --primary-foreground: 220 33% 2%;
+    --secondary: 271 100% 68%; /* Neon Purple */
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217 33% 17%;
+    --muted-foreground: 215 20% 65%;
+    --accent: 151 100% 50%; /* Neon Green */
+    --accent-foreground: 220 33% 2%;
+    --destructive: 339 100% 59%; /* Neon Pink */
+    --destructive-foreground: 210 40% 98%;
+    --border: 191 100% 50% / 0.15;
+    --input: 217 33% 17%;
+    --ring: 191 100% 50%;
+    --radius: 0.75rem;
+    
+    --neon-cyan: #00d4ff;
+    --neon-purple: #bf5fff;
+    --neon-green: #00ff88;
+    --neon-pink: #ff2d78;
+    
+    --grad-primary: linear-gradient(135deg, #00d4ff, #bf5fff);
+    --grad-danger: linear-gradient(135deg, #ff2d78, #bf5fff);
+    --grad-success: linear-gradient(135deg, #00ff88, #00d4ff);
+    
+    --glass-bg: rgba(10, 15, 26, 0.75);
+    --glass-blur: 20px;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-body antialiased selection:bg-primary/30 selection:text-primary;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-headline uppercase tracking-[0.2em];
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-card/75 backdrop-blur-[20px] border border-primary/15 rounded-lg shadow-xl transition-all duration-300;
+  }
+  
+  .neon-glow {
+    text-shadow: 0 0 10px hsl(var(--primary) / 0.5);
+  }
+  
+  .neon-border {
+    @apply border-primary/50 shadow-[0_0_15px_hsl(var(--primary)/0.2)];
+  }
+  
+  .gradient-text {
+    /* Use background-image so gradients render correctly in text */
+    background-image: var(--grad-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+  }
+
+  .tech-pill {
+    @apply px-3 py-1 rounded-full text-xs font-code bg-accent/10 text-accent border border-accent/20 inline-flex items-center gap-2 transition-transform duration-300;
+    transform: translateZ(0);
+  }
+  .tech-pill:hover {
+    transform: translateY(-4px) scale(1.02);
+    border-color: hsl(var(--accent) / 0.4);
+    background-color: hsl(var(--accent) / 0.14);
+    box-shadow: 0 8px 30px rgba(0, 212, 255, 0.06), 0 0 18px rgba(191, 95, 255, 0.04);
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: hsl(var(--background));
+}
+::-webkit-scrollbar-thumb {
+  background: hsl(var(--primary) / 0.3);
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: hsl(var(--primary) / 0.5);
+}

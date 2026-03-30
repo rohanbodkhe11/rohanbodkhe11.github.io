@@ -1,0 +1,94 @@
+rules_version = '2';
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    /**
+     * PORTFOLIO ADMIN CMS SECURITY MODEL
+     * 
+     * Core Philosophy:
+     * This ruleset implements a Database-Backed Access Control (DBAC) model. 
+     * A central 'admins' collection serves as the source of truth for authorization.
+     */
+
+    // --- Helper Functions ---
+
+    /** @description Checks if the request is from an authenticated user. */
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    /** 
+     * @description Checks if the authenticated user is registered in the admins collection.
+     * CRITICAL: This function must not be used to secure the 'admins' collection itself
+     * to prevent infinite recursion in the rules engine.
+     */
+    function isAdmin() {
+      return isSignedIn() && exists(/databases/$(database)/documents/admins/$(request.auth.uid));
+    }
+
+    /** @description Checks if the provided ID matches the authenticated user's UID. */
+    function isOwner(userId) {
+      return isSignedIn() && request.auth.uid == userId;
+    }
+
+    // --- Collection Rules ---
+
+    /**
+     * @description Rules for Administrator profiles.
+     * Recursion Prevention: 'get' only checks ownership, not admin status.
+     */
+    match /admins/{adminId} {
+      allow get: if isOwner(adminId);
+      allow list: if isAdmin();
+      allow create: if isOwner(adminId) && request.resource.data.id == adminId;
+      allow update: if isAdmin() && isOwner(adminId);
+      allow delete: if false; 
+    }
+
+    match /projects/{projectId} {
+      allow get, list: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /posts/{postId} {
+      allow get, list: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /certifications/{certificationId} {
+      allow get, list: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /galleryItems/{galleryItemId} {
+      allow get, list: if true;
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /contactMessages/{contactMessageId} {
+      allow create: if true;
+      allow get, list, update, delete: if isAdmin();
+    }
+
+    match /siteSettings/settings {
+      allow get: if true;
+      allow list: if false;
+      allow create, update, delete: if isAdmin();
+    }
+
+    match /skillCategories/{skillCategoryId} {
+      allow get, list: if true;
+      allow create, update, delete: if isAdmin();
+
+      match /skills/{skillId} {
+        allow get, list: if true;
+        allow create, update, delete: if isAdmin();
+      }
+    }
+
+    match /education/{educationId} {
+      allow get, list: if true;
+      allow create, update, delete: if isAdmin();
+    }
+  }
+}

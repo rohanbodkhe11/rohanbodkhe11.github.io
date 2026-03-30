@@ -1,0 +1,19 @@
+# **App Name**: Rohan Bodkhe's Portfolio
+
+## Core Features:
+
+- Dynamic Content Management: A comprehensive, responsive CMS Admin Dashboard for Rohan to effortlessly manage all portfolio content (projects, blog posts, certifications, gallery items, education, and site settings) without touching code. Includes forms for data entry and drag-and-drop file uploads to Cloudinary.
+- Secure Admin Authentication: A protected admin login system using JWT for access and refresh tokens, ensuring secure access to the CMS with features like httpOnly cookies, rate limiting, and password hashing (bcrypt).
+- Interactive Portfolio Showcase: A public-facing website to dynamically display Rohan's projects with filtering, certifications with credential verification, educational journey in a timeline, a responsive gallery, and an engaging blog.
+- Rich Text Blog Authoring: Integration of the TipTap rich text editor within the admin dashboard to enable Rohan to author and publish detailed blog posts with formatting, images, and code blocks, which are then rendered as rich HTML on the public site.
+- Media Asset Management: Seamless integration with Cloudinary for handling all image and file uploads (project screenshots, certification images, gallery photos, blog cover images), allowing Rohan to manage media directly through the CMS.
+- AI Writing Assistant: A generative AI tool within the CMS to assist Rohan in drafting compelling project descriptions, blog post outlines, and engaging 'About Me' content, leveraging natural language processing for quick content generation suggestions.
+- Contact and Inquiry System: A public contact form that collects inquiries, applies rate limiting to prevent spam, saves messages to the database, and sends email notifications to Rohan, with an admin inbox to review and manage all received messages.
+
+## Style Guidelines:
+
+- The dominant color scheme is dark, defined by a `bg-primary` of `#020408` for a near-black base. The primary accent color for interactive elements and highlights is `Neon Cyan (#00D4FF)`, providing a futuristic glow. The accent color is `Neon Green (#00FF88)`, which harmonizes as an analogous color and contributes to the 'hacker's war room' aesthetic.
+- Headlines and the application logo utilize 'Orbitron' (sans-serif) for a futuristic, uppercase, and distinct appeal. Body and paragraph text employ 'Syne' (sans-serif) for readability. Code snippets, tech tags, and numeric counters feature 'JetBrains Mono' (monospace) in neon green to reinforce the technical theme. Note: currently only Google Fonts are supported.
+- Icons, sourced from Lucide React and React Icons, are incorporated with a neon glowing effect to complement the dark theme. This includes glowing indicators for active navigation links, animated eye icons on project hovers, and stylized social media icons.
+- Layouts prioritize a mobile-first approach, transitioning to a two-column structure on desktop for pages like 'About Me' and 'Contact', and dynamic grid layouts for 'Projects', 'Certifications', and 'Gallery'. A full-viewport hero section dominates the home page. The design frequently uses 'Glass Cards' with `backdrop-filter: blur(20px)` and subtle glowing borders for an elevated, layered aesthetic.
+- Animations are critical for a 'live' and 'technically impressive' feel. They include staggered fade-up effects for hero content, scroll-triggered section reveals with left-side slides, interactive hover effects on cards (lift, neon border glow) and buttons (scale, glow shadow pulse), and continuous elements like a slowly rotating neon ring around the profile image and a 3D particle field background.

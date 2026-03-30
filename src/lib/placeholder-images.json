@@ -1,0 +1,34 @@
+{
+  "placeholderImages": [
+    {
+      "id": "profile",
+      "description": "Rohan Bodkhe profile picture",
+      "imageUrl": "https://i.ibb.co/24nN9ty/about-me123.png",
+      "imageHint": "Rohan Bodkhe portrait"
+    },
+    {
+      "id": "project-1",
+      "description": "Study Mate App Screenshot",
+      "imageUrl": "https://picsum.photos/seed/studymate/800/450",
+      "imageHint": "educational dashboard"
+    },
+    {
+      "id": "project-2",
+      "description": "MIT Attendance App",
+      "imageUrl": "https://picsum.photos/seed/attendance/800/450",
+      "imageHint": "attendance system"
+    },
+    {
+      "id": "cert-1",
+      "description": "Cybersecurity Certificate",
+      "imageUrl": "https://picsum.photos/seed/cybercert/600/400",
+      "imageHint": "security certificate"
+    },
+    {
+      "id": "gallery-1",
+      "description": "MIT College Campus Event",
+      "imageUrl": "https://picsum.photos/seed/college_event/800/600",
+      "imageHint": "engineering college"
+    }
+  ]
+}

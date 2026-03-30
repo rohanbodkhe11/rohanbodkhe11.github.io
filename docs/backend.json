@@ -1,0 +1,694 @@
+{
+  "entities": {
+    "User": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "User",
+      "type": "object",
+      "description": "Represents an administrative user for managing the portfolio content.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the User entity."
+        },
+        "username": {
+          "type": "string",
+          "description": "Unique username for the administrator."
+        },
+        "email": {
+          "type": "string",
+          "description": "Unique email address of the administrator.",
+          "format": "email"
+        },
+        "avatar": {
+          "type": "string",
+          "description": "URL to the administrator's profile avatar image, hosted on Cloudinary.",
+          "format": "uri"
+        },
+        "role": {
+          "type": "string",
+          "description": "The role of the user, currently fixed to 'admin'."
+        },
+        "refreshToken": {
+          "type": "string",
+          "description": "A token used to securely obtain new access tokens. (Internal to authentication system)."
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Timestamp when the user account was created.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "username",
+        "email",
+        "role",
+        "createdAt"
+      ]
+    },
+    "Project": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Project",
+      "type": "object",
+      "description": "Represents a project showcased in Rohan Bodkhe's portfolio.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Project entity."
+        },
+        "title": {
+          "type": "string",
+          "description": "The title of the project."
+        },
+        "slug": {
+          "type": "string",
+          "description": "A URL-friendly unique identifier for the project, auto-generated from the title."
+        },
+        "shortDescription": {
+          "type": "string",
+          "description": "A brief, one or two-line summary of the project."
+        },
+        "longDescription": {
+          "type": "string",
+          "description": "A detailed description of the project, potentially including features and challenges."
+        },
+        "category": {
+          "type": "string",
+          "description": "The category the project belongs to (e.g., 'webdev', 'cybersecurity')."
+        },
+        "techStack": {
+          "type": "array",
+          "description": "An array of technologies, frameworks, and languages used in the project.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": "URL to the main image or screenshot of the project, hosted on Cloudinary.",
+          "format": "uri"
+        },
+        "imagePublicId": {
+          "type": "string",
+          "description": "The public ID of the project image on Cloudinary, used for management."
+        },
+        "githubUrl": {
+          "type": "string",
+          "description": "URL to the project's GitHub repository.",
+          "format": "uri"
+        },
+        "liveUrl": {
+          "type": "string",
+          "description": "URL to the live demo or deployed version of the project.",
+          "format": "uri"
+        },
+        "status": {
+          "type": "string",
+          "description": "The current development status of the project (e.g., 'completed', 'ongoing')."
+        },
+        "featured": {
+          "type": "boolean",
+          "description": "Indicates if the project should be prominently displayed as a featured item."
+        },
+        "order": {
+          "type": "number",
+          "description": "Numerical order for displaying projects, allowing custom sorting."
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Timestamp when the project record was created.",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Timestamp when the project record was last updated.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "slug",
+        "shortDescription",
+        "category",
+        "imageUrl",
+        "status",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "Post": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Post",
+      "type": "object",
+      "description": "Represents a blog post or article in Rohan Bodkhe's portfolio.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Post entity."
+        },
+        "title": {
+          "type": "string",
+          "description": "The title of the blog post."
+        },
+        "slug": {
+          "type": "string",
+          "description": "A URL-friendly unique identifier for the post."
+        },
+        "excerpt": {
+          "type": "string",
+          "description": "A brief summary or snippet of the post content."
+        },
+        "content": {
+          "type": "string",
+          "description": "The full HTML content of the blog post, generated by a rich text editor."
+        },
+        "coverImage": {
+          "type": "string",
+          "description": "URL to the cover image of the blog post, hosted on Cloudinary.",
+          "format": "uri"
+        },
+        "coverImagePublicId": {
+          "type": "string",
+          "description": "The public ID of the cover image on Cloudinary."
+        },
+        "tags": {
+          "type": "array",
+          "description": "A list of tags associated with the post for categorization and search.",
+          "items": {
+            "type": "string"
+          }
+        },
+        "category": {
+          "type": "string",
+          "description": "The category of the blog post (e.g., 'Web Development', 'Cybersecurity')."
+        },
+        "status": {
+          "type": "string",
+          "description": "The publication status of the post (e.g., 'draft', 'published')."
+        },
+        "views": {
+          "type": "number",
+          "description": "The number of times the post has been viewed."
+        },
+        "readTime": {
+          "type": "number",
+          "description": "Estimated reading time of the post in minutes."
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Timestamp when the post was created.",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Timestamp when the post was last updated.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "slug",
+        "excerpt",
+        "content",
+        "coverImage",
+        "status",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "Certification": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Certification",
+      "type": "object",
+      "description": "Represents a professional certification or achievement obtained by Rohan Bodkhe.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Certification entity."
+        },
+        "title": {
+          "type": "string",
+          "description": "The title or name of the certification."
+        },
+        "issuer": {
+          "type": "string",
+          "description": "The organization or institution that issued the certification."
+        },
+        "issuerLogo": {
+          "type": "string",
+          "description": "URL to the logo of the issuing organization.",
+          "format": "uri"
+        },
+        "dateIssued": {
+          "type": "string",
+          "description": "The date when the certification was issued.",
+          "format": "date"
+        },
+        "credentialId": {
+          "type": "string",
+          "description": "The unique credential ID or verification code for the certification."
+        },
+        "credentialUrl": {
+          "type": "string",
+          "description": "URL where the certification can be verified.",
+          "format": "uri"
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": "URL to an image of the certificate, hosted on Cloudinary.",
+          "format": "uri"
+        },
+        "imagePublicId": {
+          "type": "string",
+          "description": "The public ID of the certificate image on Cloudinary."
+        },
+        "pdfUrl": {
+          "type": "string",
+          "description": "URL to a PDF version of the certificate, hosted on Cloudinary.",
+          "format": "uri"
+        },
+        "pdfPublicId": {
+          "type": "string",
+          "description": "The public ID of the certificate PDF on Cloudinary."
+        },
+        "category": {
+          "type": "string",
+          "description": "The category of the certification (e.g., 'Cloud', 'Security', 'Web')."
+        },
+        "order": {
+          "type": "number",
+          "description": "Numerical order for displaying certifications."
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Timestamp when the certification record was created.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "title",
+        "issuer",
+        "dateIssued",
+        "imageUrl",
+        "createdAt"
+      ]
+    },
+    "GalleryItem": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "GalleryItem",
+      "type": "object",
+      "description": "Represents an image item displayed in the portfolio's gallery.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the GalleryItem entity."
+        },
+        "imageUrl": {
+          "type": "string",
+          "description": "URL to the gallery image, hosted on Cloudinary.",
+          "format": "uri"
+        },
+        "imagePublicId": {
+          "type": "string",
+          "description": "The public ID of the gallery image on Cloudinary."
+        },
+        "title": {
+          "type": "string",
+          "description": "A title or caption for the gallery image."
+        },
+        "description": {
+          "type": "string",
+          "description": "A short description for the gallery image."
+        },
+        "category": {
+          "type": "string",
+          "description": "The category the image belongs to (e.g., 'events', 'projects')."
+        },
+        "order": {
+          "type": "number",
+          "description": "Numerical order for displaying gallery items."
+        },
+        "uploadedAt": {
+          "type": "string",
+          "description": "Timestamp when the image was uploaded to the gallery.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "imageUrl",
+        "imagePublicId",
+        "title",
+        "category",
+        "uploadedAt"
+      ]
+    },
+    "ContactMessage": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "ContactMessage",
+      "type": "object",
+      "description": "Represents a message submitted through the public contact form.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the ContactMessage entity."
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the person who sent the message."
+        },
+        "email": {
+          "type": "string",
+          "description": "The email address of the sender.",
+          "format": "email"
+        },
+        "subject": {
+          "type": "string",
+          "description": "The subject line of the message."
+        },
+        "message": {
+          "type": "string",
+          "description": "The full content of the message."
+        },
+        "isRead": {
+          "type": "boolean",
+          "description": "Indicates whether the message has been marked as read by the administrator."
+        },
+        "ipAddress": {
+          "type": "string",
+          "description": "The IP address from which the message was sent (for spam prevention and logging)."
+        },
+        "receivedAt": {
+          "type": "string",
+          "description": "Timestamp when the message was received.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "email",
+        "subject",
+        "message",
+        "isRead",
+        "receivedAt"
+      ]
+    },
+    "SiteSettings": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "SiteSettings",
+      "type": "object",
+      "description": "A singleton entity holding global configuration and content for the portfolio website.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the SiteSettings entity (will be a fixed ID for a singleton)."
+        },
+        "bio": {
+          "type": "string",
+          "description": "The main biographical text for Rohan Bodkhe, displayed on the 'About Me' page."
+        },
+        "tagline": {
+          "type": "string",
+          "description": "A short, impactful tagline for the portfolio."
+        },
+        "availableForWork": {
+          "type": "boolean",
+          "description": "Indicates Rohan's current availability for internships or projects."
+        },
+        "socialGithubUrl": {
+          "type": "string",
+          "description": "URL to Rohan's GitHub profile.",
+          "format": "uri"
+        },
+        "socialLinkedinUrl": {
+          "type": "string",
+          "description": "URL to Rohan's LinkedIn profile.",
+          "format": "uri"
+        },
+        "socialTwitterUrl": {
+          "type": "string",
+          "description": "URL to Rohan's Twitter profile.",
+          "format": "uri"
+        },
+        "socialInstagramUrl": {
+          "type": "string",
+          "description": "URL to Rohan's Instagram profile.",
+          "format": "uri"
+        },
+        "contactEmail": {
+          "type": "string",
+          "description": "Rohan's public contact email address.",
+          "format": "email"
+        },
+        "maintenanceMode": {
+          "type": "boolean",
+          "description": "A flag to enable/disable maintenance mode for the public site."
+        }
+      },
+      "required": [
+        "id",
+        "bio",
+        "tagline",
+        "availableForWork",
+        "maintenanceMode"
+      ]
+    },
+    "SkillCategory": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "SkillCategory",
+      "type": "object",
+      "description": "Represents a category for grouping related skills, such as 'Frontend' or 'Cybersecurity'.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the SkillCategory entity."
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the skill category (e.g., 'Frontend', 'Backend')."
+        },
+        "order": {
+          "type": "number",
+          "description": "Numerical order for displaying skill categories."
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "order"
+      ]
+    },
+    "Skill": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Skill",
+      "type": "object",
+      "description": "Represents a specific technical skill possessed by Rohan Bodkhe.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Skill entity."
+        },
+        "name": {
+          "type": "string",
+          "description": "The name of the skill (e.g., 'React', 'Nmap')."
+        },
+        "skillCategoryId": {
+          "type": "string",
+          "description": "Reference to SkillCategory. (Relationship: SkillCategory 1:N Skill)"
+        },
+        "proficiency": {
+          "type": "number",
+          "description": "A numerical value representing Rohan's proficiency level in this skill (e.g., 0-100)."
+        },
+        "order": {
+          "type": "number",
+          "description": "Numerical order for displaying skills within their category."
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "skillCategoryId"
+      ]
+    },
+    "Education": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "Education",
+      "type": "object",
+      "description": "Represents an educational entry in Rohan Bodkhe's academic history.",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier for the Education entity."
+        },
+        "institutionName": {
+          "type": "string",
+          "description": "The name of the educational institution."
+        },
+        "degreeCourseName": {
+          "type": "string",
+          "description": "The degree, course, or standard pursued."
+        },
+        "startYear": {
+          "type": "number",
+          "description": "The starting year of the education period."
+        },
+        "endYear": {
+          "type": "number",
+          "description": "The ending year of the education period. Can be null if currently pursuing."
+        },
+        "isCurrent": {
+          "type": "boolean",
+          "description": "Indicates if this education entry is currently ongoing."
+        },
+        "cgpaPercentage": {
+          "type": "string",
+          "description": "The CGPA or percentage obtained, stored as a string to accommodate various formats."
+        },
+        "description": {
+          "type": "string",
+          "description": "A short description or highlights related to this educational period."
+        },
+        "badge": {
+          "type": "string",
+          "description": "A descriptive badge for the education status (e.g., 'Pursuing', 'Completed')."
+        },
+        "order": {
+          "type": "number",
+          "description": "Numerical order for displaying education entries in a timeline."
+        },
+        "createdAt": {
+          "type": "string",
+          "description": "Timestamp when the education record was created.",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "description": "Timestamp when the education record was last updated.",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "id",
+        "institutionName",
+        "degreeCourseName",
+        "startYear",
+        "isCurrent",
+        "cgpaPercentage",
+        "createdAt",
+        "updatedAt"
+      ]
+    }
+  },
+  "auth": {
+    "providers": [
+      "password",
+      "anonymous"
+    ]
+  },
+  "firestore": {
+    "structure": [
+      {
+        "path": "/admins/{adminId}",
+        "definition": {
+          "entityName": "User",
+          "schema": {
+            "$ref": "#/backend/entities/User"
+          },
+          "description": "Collection for storing administrator user profiles. Used for DBAC (Database-Backed Access Control) to verify admin role based on `request.auth.uid` for all CMS operations. Includes denormalized 'role' field for authorization independence.",
+          "params": [
+            {
+              "name": "adminId",
+              "description": "The unique ID of the administrator, corresponding to `request.auth.uid`."
+            }
+          ]
+        }
+      },
+      {
+        "path": "/projects/{projectId}",
+        "definition": {
+          "entityName": "Project",
+          "schema": {
+            "$ref": "#/backend/entities/Project"
+          },
+          "description": "Collection for Rohan Bodkhe's portfolio projects. Documents are publicly readable (if status is 'completed' or 'ongoing' as enforced by rules) and only writable by the administrator. Includes 'status' and 'featured' fields for public filtering."
+        }
+      },
+      {
+        "path": "/posts/{postId}",
+        "definition": {
+          "entityName": "Post",
+          "schema": {
+            "$ref": "#/backend/entities/Post"
+          },
+          "description": "Collection for blog posts. Documents are publicly readable (if status is 'published' as enforced by rules) and only writable by the administrator. Utilizes a 'status' field for explicit state modeling (draft/published)."
+        }
+      },
+      {
+        "path": "/certifications/{certificationId}",
+        "definition": {
+          "entityName": "Certification",
+          "schema": {
+            "$ref": "#/backend/entities/Certification"
+          },
+          "description": "Collection for professional certifications. Documents are publicly readable and only writable by the administrator."
+        }
+      },
+      {
+        "path": "/galleryItems/{galleryItemId}",
+        "definition": {
+          "entityName": "GalleryItem",
+          "schema": {
+            "$ref": "#/backend/entities/GalleryItem"
+          },
+          "description": "Collection for images displayed in the portfolio gallery. Documents are publicly readable and only writable by the administrator."
+        }
+      },
+      {
+        "path": "/contactMessages/{contactMessageId}",
+        "definition": {
+          "entityName": "ContactMessage",
+          "schema": {
+            "$ref": "#/backend/entities/ContactMessage"
+          },
+          "description": "Collection for contact messages submitted via the public form. Documents are publicly writable (unauthenticated create) but only readable and deletable by the administrator."
+        }
+      },
+      {
+        "path": "/siteSettings/settings",
+        "definition": {
+          "entityName": "SiteSettings",
+          "schema": {
+            "$ref": "#/backend/entities/SiteSettings"
+          },
+          "description": "Singleton document storing global site configurations and content. Publicly readable via 'get' operation, but only writable by the administrator. Document ID is fixed to 'settings' for predictable access."
+        }
+      },
+      {
+        "path": "/skillCategories/{skillCategoryId}",
+        "definition": {
+          "entityName": "SkillCategory",
+          "schema": {
+            "$ref": "#/backend/entities/SkillCategory"
+          },
+          "description": "Collection for grouping related skills. Documents are publicly readable and only writable by the administrator."
+        }
+      },
+      {
+        "path": "/skillCategories/{skillCategoryId}/skills/{skillId}",
+        "definition": {
+          "entityName": "Skill",
+          "schema": {
+            "$ref": "#/backend/entities/Skill"
+          },
+          "description": "Subcollection for specific technical skills, nested under their respective categories. Documents are publicly readable and only writable by the administrator. The 'skillCategoryId' is inherently part of the path for clear relationship modeling."
+        }
+      }
+    ],
+    "reasoning": "The Firestore structure is designed following the core principles of Authorization Independence, Structural Segregation, and clear Access Modeling to ensure robust security, scalability, and debuggability for Rohan Bodkhe's portfolio and its Admin CMS. Authorization Independence is primarily achieved through a dedicated `/admins/{adminId}` collection. This collection acts as the single source of truth for administrator roles, where `{adminId}` directly corresponds to `request.auth.uid`. All admin-level operations (creating, updating, deleting content, reading contact messages, updating site settings) will reference this collection via a simple `exists(/databases/$(database)/documents/admins/$(request.auth.uid))` check in security rules, thereby eliminating complex `get()` calls that create hierarchical authorization dependencies and break atomic operations. This design choice makes rules explicit, atomic, and easy to debug. Structural Segregation ensures that all documents within a given collection share a homogeneous security posture. Publicly viewable content (Projects, Posts, Certifications, Gallery Items, Education, Skill Categories, Skills, and Site Settings) resides in top-level collections or logically nested subcollections to facilitate simple public read access. Collections like `/contactMessages` are configured for public write but admin-only read access. This prevents mixing data with different access requirements and simplifies security rules. For QAPs (Queries Are Not Filters), the structure supports secure `list` operations by leveraging Firebase Security Rules to enforce necessary conditions (e.g., `resource.data.status == 'published'`) for public reads on collections like `/posts` and `/projects`. This prevents unauthorized `list` queries from returning draft or private content. Admin users, identified by their presence in `/admins`, will have broader read/write access where appropriate, without needing complex client-side filtering that could expose sensitive data. The `SiteSettings` entity is modeled as a singleton document at `/siteSettings/settings`, allowing simple public `get` access while restricting `update` operations to the authenticated administrator. The relationship between `SkillCategory` and `Skill` is modeled using a hierarchical path `/skillCategories/{skillCategoryId}/skills/{skillId}`, aligning with the 'Continue Hierarchy for Nested Data' mandate, making the relationship clear and enabling efficient queries for skills within a specific category or collection group queries for all skills."
+  }
+}
