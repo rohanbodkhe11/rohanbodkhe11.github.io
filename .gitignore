@@ -1,5 +1,6 @@
 .env
 .env.*
 !.env.example
+js/supabase-config.js
 node_modules/
 .DS_Store
