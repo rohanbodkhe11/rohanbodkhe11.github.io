@@ -51,6 +51,10 @@ create policy admin_all on public.contact_messages for select, update, delete us
 create policy public_insert_contact on public.contact_messages for insert with check (length(name) between 1 and 120 and length(message) between 1 and 5000);
 
 insert into storage.buckets (id, name, public) values ('portfolio-images','portfolio-images',true),('certificates','certificates',true),('gallery','gallery',true),('resume','resume',true) on conflict (id) do nothing;
+drop policy if exists storage_public_read on storage.objects;
+drop policy if exists storage_admin_insert on storage.objects;
+drop policy if exists storage_admin_update on storage.objects;
+drop policy if exists storage_admin_delete on storage.objects;
 create policy storage_public_read on storage.objects for select using (bucket_id in ('portfolio-images','certificates','gallery','resume'));
 create policy storage_admin_insert on storage.objects for insert with check (public.is_admin() and bucket_id in ('portfolio-images','certificates','gallery','resume'));
 create policy storage_admin_update on storage.objects for update using (public.is_admin()) with check (public.is_admin());

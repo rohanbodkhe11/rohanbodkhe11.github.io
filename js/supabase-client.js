@@ -16,3 +16,5 @@ export async function requireAdmin() {
   if (error || !admin) { await client.auth.signOut(); location.href = '../login/'; return null; }
   return session;
 }
+
+if (location.pathname.includes('/admin/')) import('./admin-storage.js');
