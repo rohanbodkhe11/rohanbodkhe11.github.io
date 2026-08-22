@@ -1,0 +1,6 @@
+// Copy this file to supabase-config.js and fill in the public values from Supabase.
+// Never place a service_role key or database password here.
+window.SUPABASE_CONFIG = {
+  url: 'https://your-project.supabase.co',
+  publishableKey: 'your-publishable-key'
+};
