@@ -1,0 +1,1 @@
+.scroll-reveal{opacity:0;transform:translateY(22px);transition:opacity .6s ease,transform .6s ease}.scroll-reveal.visible{opacity:1;transform:none}@media(prefers-reduced-motion:reduce){.scroll-reveal{opacity:1;transform:none;transition:none}}
