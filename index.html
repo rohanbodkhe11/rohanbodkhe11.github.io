@@ -28,89 +28,1039 @@
 
 <style>
 
-/*======================================
-//--//-->   ABOUT
-======================================*/
 
+/* =========================================================
+   ABOUT SECTION - COMPLETE CORRECTED CSS
+   ========================================================= */
+
+/* Main About Box */
 .about-mf .box-shadow-full {
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+
+    background: linear-gradient(
+        135deg,
+        #0b1220 0%,
+        #111c35 45%,
+        #24163d 100%
+    );
+
+    border: 1px solid rgba(0, 217, 255, 0.22);
+    border-radius: 22px;
+
+    box-shadow:
+        0 20px 50px rgba(0, 0, 0, 0.35),
+        0 0 35px rgba(0, 217, 255, 0.06);
+
+    overflow: hidden;
 }
 
+
+/* =========================================================
+   ABOUT IMAGE
+   ========================================================= */
+
 .about-mf .about-img {
-  margin-bottom: 2rem;
+    margin-bottom: 2rem;
 }
 
 .about-mf .about-img img {
-  margin-left: 10px;
+    margin-left: 10px;
+    border-radius: 15px;
+    max-width: 100%;
+    height: auto;
+
+    box-shadow:
+        0 12px 30px rgba(0, 0, 0, 0.35),
+        0 0 20px rgba(0, 217, 255, 0.12);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.about-mf .about-img img:hover {
+    transform: scale(1.03);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.45),
+        0 0 30px rgba(0, 217, 255, 0.20);
 }
 
 
-.skill-mf .progress {
-  /* background-color: #cde1f8; */
-  margin: .5rem 0 1.2rem 0;
-  border-radius: 0;
-  height: .7rem;
+/* =========================================================
+   ABOUT TEXT
+   ========================================================= */
+
+.about-mf p {
+    color: #e5e7eb !important;
+    font-size: 15px;
+    line-height: 1.8;
 }
 
-.skill-mf .progress .progress-bar {
-  height: .7rem;
-  background-color: #ffbd39;
+.about-mf h1,
+.about-mf h2,
+.about-mf h3 {
+    color: #ffffff !important;
+}
+
+.about-mf .heading-section p {
+    color: #e2e8f0 !important;
+    line-height: 1.8;
 }
 
 
-/* Animation styles */
+/* =========================================================
+   PERSONAL INFORMATION
+   ========================================================= */
+
+.about-mf .about-info {
+    color: #f1f5f9 !important;
+}
+
+.about-mf .about-info li {
+    color: #e5e7eb !important;
+    margin-bottom: 8px;
+}
+
+.about-mf .about-info li span:first-child {
+    color: #22d3ee !important;
+    font-weight: 700;
+}
+
+.about-mf .about-info li span:last-child {
+    color: #f8fafc !important;
+}
+
+
+/* If your template uses p instead of li */
+.about-mf .about-info p {
+    color: #e5e7eb !important;
+}
+
+.about-mf .about-info .title-s {
+    color: #22d3ee !important;
+    font-weight: 700;
+}
+
+.about-mf .about-info p span:not(.title-s) {
+    color: #f8fafc !important;
+}
+
+
+/* =========================================================
+   TYPING ANIMATION
+   ========================================================= */
+
 #typing-animation {
-  position: relative;
-  font-size: 30px;
-  font-weight: bold;
-  color: rgb(255, 255, 255);
-  overflow: hidden;
-  white-space: nowrap;
-  animation: typing 3s steps(20, end) infinite;
+    position: relative;
+
+    font-size: 30px;
+    font-weight: 700;
+
+    color: #67e8f9 !important;
+
+    overflow: hidden;
+    white-space: nowrap;
+
+    text-shadow:
+        0 0 10px rgba(34, 211, 238, 0.35);
+
+    animation: typing 3s steps(20, end) infinite;
 }
 
 #typing-animation:before {
-  content: "";
-  /* position: absolute; */
-  top: 0;
-  left: 0;
-  width: 0;
-  height: 100%;
-  background-color: #ccc;
-  animation: typing-cursor 0.5s ease-in-out infinite;
+    content: "";
+    position: absolute;
+
+    top: 0;
+    left: 0;
+
+    width: 0;
+    height: 100%;
+
+    background-color: #0b1220;
+
+    animation: typing-cursor 0.5s ease-in-out infinite;
 }
 
 @keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 100%;
+    }
 }
 
 @keyframes typing-cursor {
-  from {
-    width: 5px;
-  }
-  to {
-    width: 0;
-  }
+    from {
+        width: 5px;
+    }
+
+    to {
+        width: 0;
+    }
 }
 
 
-/* project image zoom effect */
+/* =========================================================
+   SKILLS SECTION
+   ========================================================= */
+
+.about-mf .skill-mf {
+    margin-top: 20px;
+}
+
+.about-mf .skill-mf .title-s {
+    color: #22d3ee !important;
+    font-size: 16px;
+    font-weight: 700;
+}
+
+
+/* Skill name */
+.about-mf .skill-mf > span {
+    display: inline-block;
+
+    color: #f8fafc !important;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    margin-bottom: 2px;
+}
+
+
+/* Percentage */
+.about-mf .skill-mf .pull-right {
+    color: #67e8f9 !important;
+
+    font-size: 14px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   PROGRESS BAR - MAIN FIX
+   ========================================================= */
+
+.about-mf .skill-mf .progress {
+    display: block !important;
+
+    position: relative !important;
+
+    width: 100% !important;
+    height: 12px !important;
+
+    margin-top: 7px !important;
+    margin-bottom: 18px !important;
+
+    padding: 0 !important;
+
+    background-color: #334155 !important;
+    background: #334155 !important;
+
+    border: 1px solid rgba(255, 255, 255, 0.12) !important;
+
+    border-radius: 50px !important;
+
+    overflow: hidden !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+}
+
+
+/* Filled part */
+.about-mf .skill-mf .progress .progress-bar {
+    display: block !important;
+
+    position: relative !important;
+
+    width: auto;
+
+    height: 100% !important;
+    min-height: 12px !important;
+
+    margin: 0 !important;
+    padding: 0 !important;
+
+    background-color: #00d9ff !important;
+
+    background-image: linear-gradient(
+        90deg,
+        #00d9ff 0%,
+        #6366f1 50%,
+        #a855f7 100%
+    ) !important;
+
+    border-radius: 50px !important;
+
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    box-shadow:
+        0 0 8px rgba(0, 217, 255, 0.55),
+        0 0 15px rgba(99, 102, 241, 0.25);
+
+    transition:
+        width 1s ease,
+        transform 0.3s ease;
+}
+
+
+/* Hover effect */
+.about-mf .skill-mf .progress:hover .progress-bar {
+    filter: brightness(1.2);
+
+    box-shadow:
+        0 0 12px rgba(0, 217, 255, 0.7),
+        0 0 20px rgba(168, 85, 247, 0.4);
+}
+
+
+/* =========================================================
+   INDIVIDUAL SKILL COLORS
+   ========================================================= */
+
+.about-mf .skill-mf .progress:nth-of-type(1) .progress-bar {
+    background: linear-gradient(
+        90deg,
+        #00d9ff,
+        #2563eb
+    ) !important;
+}
+
+.about-mf .skill-mf .progress:nth-of-type(2) .progress-bar {
+    background: linear-gradient(
+        90deg,
+        #06b6d4,
+        #6366f1
+    ) !important;
+}
+
+.about-mf .skill-mf .progress:nth-of-type(3) .progress-bar {
+    background: linear-gradient(
+        90deg,
+        #6366f1,
+        #8b5cf6
+    ) !important;
+}
+
+.about-mf .skill-mf .progress:nth-of-type(4) .progress-bar {
+    background: linear-gradient(
+        90deg,
+        #8b5cf6,
+        #a855f7
+    ) !important;
+}
+
+.about-mf .skill-mf .progress:nth-of-type(5) .progress-bar {
+    background: linear-gradient(
+        90deg,
+        #06b6d4,
+        #14b8a6
+    ) !important;
+}
+
+
+/* =========================================================
+   ZOOM EFFECT
+   ========================================================= */
 
 .zoom-effect {
-  overflow: hidden;
-  transition: transform 0.3s ease-out;
+    overflow: hidden;
+    transition: transform 0.3s ease-out;
 }
 
 .zoom-effect:hover {
-  transform: scale(1.1);
+    transform: scale(1.05);
 }
 
+
+/* =========================================================
+   MOBILE RESPONSIVE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .about-mf .box-shadow-full {
+        padding: 2rem 1.5rem;
+
+        background: linear-gradient(
+            145deg,
+            #0b1220,
+            #17243f,
+            #28183f
+        );
+
+        border-radius: 18px;
+    }
+
+    .about-mf .about-img img {
+        margin-left: 0;
+    }
+
+    .about-mf p {
+        color: #e5e7eb !important;
+        font-size: 14px;
+    }
+
+    .about-mf .skill-mf .progress {
+        height: 11px !important;
+    }
+
+    .about-mf .skill-mf .progress .progress-bar {
+        height: 100% !important;
+        min-height: 11px !important;
+    }
+
+    #typing-animation {
+        font-size: 23px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .about-mf .box-shadow-full {
+        padding: 1.5rem 1rem;
+    }
+
+    .about-mf .skill-mf > span,
+    .about-mf .skill-mf .pull-right {
+        font-size: 13px;
+    }
+
+    .about-mf .skill-mf .progress {
+        height: 10px !important;
+        min-height: 10px !important;
+    }
+
+    .about-mf .skill-mf .progress .progress-bar {
+        min-height: 10px !important;
+    }
+}
+/* =====================================================
+   EDUCATION JOURNEY
+   ===================================================== */
+
+.education-timeline {
+    position: relative;
+
+    max-width: 950px;
+
+    margin: 0 auto;
+
+    padding: 10px 0 20px;
+}
+
+
+/* Vertical timeline line */
+
+.education-timeline::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    bottom: 0;
+
+    left: 24px;
+
+    width: 2px;
+
+    background: linear-gradient(
+        to bottom,
+        #ffbd39,
+        rgba(255, 189, 57, 0.15)
+    );
+}
+
+
+/* Individual education item */
+
+.education-item {
+    position: relative;
+
+    display: flex;
+
+    align-items: flex-start;
+
+    margin-bottom: 35px;
+
+    padding-left: 70px;
+}
+
+
+/* Timeline dot */
+
+.education-dot {
+    position: absolute;
+
+    left: 14px;
+
+    top: 28px;
+
+    width: 22px;
+    height: 22px;
+
+    border-radius: 50%;
+
+    background: #ffbd39;
+
+    border: 5px solid #111111;
+
+    box-shadow:
+        0 0 0 2px #ffbd39,
+        0 0 15px rgba(255, 189, 57, 0.45);
+
+    z-index: 2;
+}
+
+
+/* Education card */
+
+.education-card {
+    width: 100%;
+
+    padding: 28px 30px;
+
+    border-radius: 14px;
+
+    background: rgba(255, 255, 255, 0.04);
+
+    border: 1px solid rgba(255, 255, 255, 0.10);
+
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.15);
+
+    transition:
+        transform 0.3s ease,
+        border-color 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+
+/* Hover */
+
+.education-card:hover {
+    transform: translateY(-5px);
+
+    border-color: rgba(255, 189, 57, 0.45);
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.25),
+        0 0 20px rgba(255, 189, 57, 0.08);
+}
+
+
+/* Date */
+
+.education-date {
+    display: inline-block;
+
+    margin-bottom: 10px;
+
+    padding: 5px 12px;
+
+    border-radius: 20px;
+
+    background: rgba(255, 189, 57, 0.10);
+
+    border: 1px solid rgba(255, 189, 57, 0.25);
+
+    color: #ffbd39;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    letter-spacing: 1px;
+}
+
+
+/* Degree */
+
+.education-card h2 {
+    margin: 5px 0 7px;
+
+    color: inherit;
+
+    font-size: 23px;
+
+    font-weight: 700;
+}
+
+
+/* Branch */
+
+.education-card h3 {
+    margin: 0 0 8px;
+
+    color: #ffbd39;
+
+    font-size: 16px;
+
+    font-weight: 600;
+}
+
+
+/* Institute */
+
+.education-institute {
+    display: block;
+
+    margin-bottom: 15px;
+
+    color: inherit;
+
+    font-size: 14px;
+
+    opacity: 0.75;
+
+    line-height: 1.6;
+}
+
+
+/* Details */
+
+.education-details {
+    margin-top: 12px;
+
+    padding-top: 12px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+
+.education-details p {
+    margin: 6px 0;
+
+    color: inherit;
+
+    font-size: 14px;
+
+    line-height: 1.6;
+}
+
+
+.education-details strong {
+    color: inherit;
+
+    font-weight: 600;
+}
+/* ================= EDUCATION CARD ================= */
+
+.education-card {
+    width: 100%;
+    padding: 30px;
+
+    /* BOX BACKGROUND */
+    background: #101a2e;
+
+    /* BORDER */
+    border: 1px solid #263a5a;
+    border-radius: 16px;
+
+    box-shadow:
+        0 12px 35px rgba(0, 0, 0, 0.35);
+
+    transition: all 0.3s ease;
+}
+
+/* Hover */
+.education-card:hover {
+    transform: translateY(-6px);
+
+    background: #14213a;
+
+    border-color: #00d9ff;
+
+    box-shadow:
+        0 18px 45px rgba(0, 0, 0, 0.45),
+        0 0 25px rgba(0, 217, 255, 0.12);
+}
+
+
+/* ================= DATE ================= */
+
+.education-date {
+    display: inline-block;
+
+    padding: 6px 13px;
+    margin-bottom: 12px;
+
+    background: #00d9ff;
+    color: #07111f;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+/* ================= DEGREE ================= */
+
+.education-card h2 {
+    margin: 5px 0 8px;
+
+    color: #ffffff !important;
+
+    font-size: 23px;
+    font-weight: 700;
+
+    line-height: 1.35;
+}
+
+
+/* ================= BRANCH ================= */
+
+.education-card h3 {
+    margin: 0 0 10px;
+
+    color: #00d9ff !important;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    line-height: 1.5;
+}
+
+
+/* ================= COLLEGE NAME ================= */
+
+.education-institute {
+    display: block;
+
+    margin-bottom: 17px;
+
+    color: #e5e7eb !important;
+
+    opacity: 1 !important;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    line-height: 1.6;
+}
+
+
+/* ================= DETAILS ================= */
+
+.education-details {
+    margin-top: 14px;
+    padding-top: 14px;
+
+    border-top: 1px solid #304565;
+}
+
+
+.education-details p {
+    margin: 7px 0;
+
+    color: #dbeafe !important;
+
+    font-size: 14px;
+    font-weight: 500;
+
+    line-height: 1.6;
+}
+
+
+/* IMPORTANT: Labels */
+
+.education-details strong {
+    color: #ffffff !important;
+
+    font-weight: 700;
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 768px) {
+
+    .education-card {
+        padding: 23px 20px;
+    }
+
+    .education-card h2 {
+        font-size: 20px;
+    }
+
+    .education-card h3 {
+        font-size: 15px;
+    }
+
+    .education-institute,
+    .education-details p {
+        font-size: 13px;
+    }
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 480px) {
+
+    .education-card {
+        padding: 20px 17px;
+    }
+
+    .education-card h2 {
+        font-size: 18px;
+    }
+
+    .education-card h3 {
+        font-size: 14px;
+    }
+
+    .education-date {
+        font-size: 11px;
+    }
+}
+
+
+/* =====================================================
+   EDUCATION MOBILE
+   ===================================================== */
+
+@media (max-width: 768px) {
+
+    .education-timeline {
+        padding-bottom: 10px;
+    }
+
+    .education-timeline::before {
+        left: 17px;
+    }
+
+    .education-item {
+        padding-left: 48px;
+
+        margin-bottom: 25px;
+    }
+
+    .education-dot {
+        left: 7px;
+
+        width: 20px;
+        height: 20px;
+
+        border-width: 4px;
+    }
+
+    .education-card {
+        padding: 22px 20px;
+    }
+
+    .education-card h2 {
+        font-size: 20px;
+    }
+
+    .education-card h3 {
+        font-size: 15px;
+    }
+
+    .education-institute,
+    .education-details p {
+        font-size: 13px;
+    }
+
+}
+
+
+/* =====================================================
+   SMALL MOBILE
+   ===================================================== */
+
+@media (max-width: 480px) {
+
+    .education-item {
+        padding-left: 42px;
+    }
+
+    .education-timeline::before {
+        left: 15px;
+    }
+
+    .education-dot {
+        left: 5px;
+
+        width: 19px;
+        height: 19px;
+    }
+
+    .education-card {
+        padding: 20px 17px;
+    }
+
+    .education-card h2 {
+        font-size: 18px;
+    }
+
+}
+
+/* ===============================
+   VIEW PROJECT BUTTON
+   =============================== */
+
+.project-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+
+    padding: 11px 20px;
+    min-width: 145px;
+
+    background: #111827 !important;
+    color: #ffffff !important;
+
+    border: 1px solid #111827 !important;
+    border-radius: 10px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none !important;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+
+    transition: all 0.3s ease;
+}
+
+/* Text + icon */
+.project-btn,
+.project-btn i {
+    color: #ffffff !important;
+}
+
+/* Hover */
+.project-btn:hover {
+    background: #000000 !important;
+    color: #ffffff !important;
+
+    border-color: #00d9ff !important;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.30),
+        0 0 15px rgba(0, 217, 255, 0.20);
+}
+
+/* Arrow animation */
+.project-btn i {
+    transition: transform 0.3s ease;
+}
+
+.project-btn:hover i {
+    transform: translate(3px, -3px);
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+    .project-btn {
+        width: 100%;
+        min-width: 0;
+    }
+}
+
+
+/* =========================================
+   RESUME BUTTONS
+   ========================================= */
+
+.resume-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.resume-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 9px;
+
+    min-width: 160px;
+    padding: 12px 22px;
+
+    border-radius: 8px;
+
+    font-size: 14px;
+    font-weight: 600;
+
+    text-decoration: none !important;
+
+    transition: all 0.3s ease;
+}
+
+/* View Resume */
+.resume-view-btn {
+    background: #111827;
+    color: #ffffff !important;
+    border: 1px solid #111827;
+}
+
+.resume-view-btn:hover {
+    background: #000000;
+    color: #ffffff !important;
+    border-color: #00d9ff;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* Download Resume */
+.resume-download-btn {
+    background: #ffbd39;
+    color: #111111 !important;
+    border: 1px solid #ffbd39;
+}
+
+.resume-download-btn:hover {
+    background: #e5a82f;
+    color: #111111 !important;
+
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
+}
+
+/* Icons */
+.resume-btn span {
+    font-size: 16px;
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+
+    .resume-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .resume-btn {
+        width: 100%;
+        max-width: 260px;
+    }
+
+}
 
 
 	  /* ================= PROJECT SLIDER ================= */
@@ -432,6 +1382,513 @@
 
 }
 
+
+/* =========================================================
+   PROJECTS SECTION
+   ========================================================= */
+
+.projects-section {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 100px 0;
+}
+
+/* Heading */
+
+.projects-section .section-heading {
+    margin-bottom: 55px;
+    padding: 0 20px;
+}
+
+.projects-section .section-subtitle {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #00d9ff;
+}
+
+.projects-section .section-heading h2 {
+    margin: 0;
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 800;
+}
+
+.projects-section .section-heading h2 span {
+    background: linear-gradient(90deg, #00d9ff, #8b5cf6);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.projects-section .section-heading p {
+    margin: 15px auto 0;
+    max-width: 650px;
+    opacity: 0.7;
+}
+
+
+/* =========================================================
+   MARQUEE
+   ========================================================= */
+
+.projects-marquee {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    padding: 25px 0 45px;
+    cursor: grab;
+    touch-action: pan-y;
+}
+
+.projects-marquee:active {
+    cursor: grabbing;
+}
+
+.projects-track {
+    display: flex;
+    align-items: stretch;
+    gap: 28px;
+    width: max-content;
+    padding-left: 30px;
+
+    animation: projectsLeftToRight 65s linear infinite;
+
+    will-change: transform;
+}
+
+.projects-marquee:hover .projects-track {
+    animation-play-state: paused;
+}
+
+
+/*
+   The track contains two identical sets of cards.
+
+   Moving from -50% to 0% creates a seamless
+   rightward infinite marquee.
+*/
+
+@keyframes projectsLeftToRight {
+    from {
+        transform: translateX(-50%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+}
+
+
+/* =========================================================
+   PROJECT CARD
+   ========================================================= */
+
+.project-card {
+    position: relative;
+    flex: 0 0 370px;
+    width: 370px;
+
+    overflow: hidden;
+
+    border: 1px solid rgba(255, 255, 255, 0.09);
+    border-radius: 24px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255, 255, 255, 0.08),
+            rgba(255, 255, 255, 0.025)
+        );
+
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+
+    box-shadow:
+        0 20px 60px rgba(0, 0, 0, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.06);
+
+    transition:
+        transform 0.4s ease,
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-12px);
+
+    border-color: rgba(0, 217, 255, 0.45);
+
+    box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.5),
+        0 0 35px rgba(0, 217, 255, 0.08);
+}
+
+
+/* =========================================================
+   PROJECT IMAGE
+   ========================================================= */
+
+.project-image {
+    position: relative;
+    width: 100%;
+    height: 220px;
+    overflow: hidden;
+    background: #080d18;
+}
+
+.project-image::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+
+    background:
+        linear-gradient(
+            to bottom,
+            transparent 55%,
+            rgba(4, 8, 20, 0.35)
+        );
+
+    pointer-events: none;
+}
+
+.project-image img {
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
+        filter 0.4s ease;
+}
+
+.project-card:hover .project-image img {
+    transform: scale(1.06);
+}
+
+
+/* =====================================================
+   PROJECT CONTENT VISIBILITY FIX
+   ===================================================== */
+
+/* Project card background */
+.project-card {
+    background: #ffffff !important;
+    border: 1px solid rgba(0, 0, 0, 0.10);
+}
+
+/* Project content */
+.project-content {
+    background: #ffffff;
+    color: #111111 !important;
+}
+
+/* Project number */
+.project-number {
+    color: #555555 !important;
+    opacity: 1 !important;
+}
+
+/* Project title */
+.project-content h3 {
+    color: #111111 !important;
+    opacity: 1 !important;
+    font-weight: 700;
+}
+
+/* Project description */
+.project-content p {
+    color: #444444 !important;
+    opacity: 1 !important;
+}
+
+/* Technology tags */
+.project-tags span {
+    color: #222222 !important;
+    background: rgba(0, 217, 255, 0.08) !important;
+    border: 1px solid rgba(0, 180, 220, 0.25) !important;
+}
+
+/* View Project button */
+.project-btn {
+    color: #111111 !important;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 217, 255, 0.12),
+        rgba(139, 92, 246, 0.12)
+    ) !important;
+    border: 1px solid rgba(0, 180, 220, 0.35) !important;
+}
+
+/* Button hover */
+.project-btn:hover {
+    color: #000000 !important;
+    background: linear-gradient(
+        135deg,
+        rgba(0, 217, 255, 0.25),
+        rgba(139, 92, 246, 0.25)
+    ) !important;
+}
+
+/* Arrow icon */
+.project-btn i {
+    color: #111111 !important;
+}
+
+
+/* =========================================================
+   TAGS
+   ========================================================= */
+
+.project-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+
+    margin-bottom: 22px;
+}
+
+.project-tags span {
+    display: inline-flex;
+    align-items: center;
+
+    padding: 6px 10px;
+
+    border: 1px solid rgba(0, 217, 255, 0.15);
+    border-radius: 50px;
+
+    background: rgba(0, 217, 255, 0.06);
+
+    color: rgba(255, 255, 255, 0.75);
+
+    font-size: 11px;
+    font-weight: 600;
+}
+
+
+/* =====================================================
+   VIEW PROJECT BUTTON - DARK STYLE
+   ===================================================== */
+
+.project-btn {
+    background: #111827 !important;
+    color: #ffffff !important;
+
+    border: 1px solid #263244 !important;
+
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.20);
+
+    font-weight: 700 !important;
+}
+
+/* Button text */
+.project-btn,
+.project-btn span,
+.project-btn i {
+    color: #ffffff !important;
+}
+
+/* Hover */
+.project-btn:hover {
+    background: #000000 !important;
+    color: #ffffff !important;
+
+    border-color: #00d9ff !important;
+
+    box-shadow:
+        0 8px 25px rgba(0, 0, 0, 0.30),
+        0 0 15px rgba(0, 217, 255, 0.15);
+}
+
+/* Arrow */
+.project-btn:hover i {
+    color: #ffffff !important;
+}
+
+
+/* =========================================================
+   MOBILE
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+    .projects-section {
+        padding: 75px 0;
+    }
+
+    .projects-section .section-heading {
+        margin-bottom: 35px;
+    }
+
+    .projects-marquee {
+        padding-bottom: 30px;
+    }
+
+    .projects-track {
+        gap: 18px;
+        padding-left: 18px;
+
+        animation-duration: 50s;
+    }
+
+    .project-card {
+        flex-basis: 82vw;
+        width: 82vw;
+        max-width: 360px;
+    }
+
+    .project-image {
+        height: 205px;
+    }
+
+    .project-content {
+        padding: 23px 20px;
+    }
+
+    .project-content h3 {
+        font-size: 19px;
+    }
+
+    .project-content p {
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+   ========================================================= */
+
+@media (max-width: 420px) {
+
+    .project-card {
+        flex-basis: 86vw;
+        width: 86vw;
+    }
+
+    .project-image {
+        height: 190px;
+    }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+   ========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+    .projects-track {
+        animation: none;
+    }
+
+    .project-card,
+    .project-image img,
+    .project-btn {
+        transition: none;
+    }
+}
+
+/* =========================================================
+   PROJECTS - INFINITE LEFT TO RIGHT MARQUEE
+   ========================================================= */
+
+(function () {
+    const track = document.getElementById("projectsTrack");
+
+    if (!track) return;
+
+    /*
+     * Clone the original 8 cards.
+     * The CSS animation moves the complete track from
+     * -50% to 0%, creating the infinite effect.
+     */
+
+    const originalCards = Array.from(track.children);
+
+    originalCards.forEach((card) => {
+        const clone = card.cloneNode(true);
+
+        clone.setAttribute("aria-hidden", "true");
+
+        /*
+         * Prevent duplicated links from being keyboard-focusable.
+         */
+        clone.querySelectorAll("a").forEach((link) => {
+            link.setAttribute("tabindex", "-1");
+        });
+
+        track.appendChild(clone);
+    });
+
+
+    /* =====================================================
+       TOUCH / DRAG SUPPORT
+       ===================================================== */
+
+    const marquee = track.parentElement;
+
+    let isDragging = false;
+    let startX = 0;
+    let currentX = 0;
+    let previousTransform = 0;
+
+    marquee.addEventListener("pointerdown", function (event) {
+
+        isDragging = true;
+
+        startX = event.clientX;
+
+        track.style.animationPlayState = "paused";
+
+        marquee.setPointerCapture(event.pointerId);
+
+    });
+
+
+    marquee.addEventListener("pointermove", function (event) {
+
+        if (!isDragging) return;
+
+        currentX = event.clientX;
+
+        const distance = currentX - startX;
+
+        track.style.transform =
+            `translateX(calc(-50% + ${distance}px))`;
+
+    });
+
+
+    marquee.addEventListener("pointerup", function () {
+
+        isDragging = false;
+
+        track.style.removeProperty("transform");
+
+        track.style.removeProperty("animation-play-state");
+
+    });
+
+
+    marquee.addEventListener("pointercancel", function () {
+
+        isDragging = false;
+
+        track.style.removeProperty("transform");
+
+        track.style.removeProperty("animation-play-state");
+
+    });
+
+})();
+
 </style>
 
 
@@ -508,8 +1965,8 @@
 
 						<br>
 						<br>
-			            <h2>A web Developer</h2>
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+			            <h2>A Full stack Developer</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 1 years of experience</h2> -->
 						<!-- <br> -->
 			            <p><a href="https://www.instagram.com/itz_rohan7823/" class="btn btn-primary py-3 px-4">Instagram</a> 
 							<a href="https://www.excellencecoachingclasses.com" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
@@ -541,8 +1998,8 @@
 									<div class="col-sm-6 col-md-7">
 									  <div class="about-info">
 										<p><span class="title-s">Name: </span> <span>Rohan Bodkhe</span></p>
-										<p><span class="title-s">Job Role: </span> <span>web designer</span></p>
-										<!-- <p><span class="title-s">Experience: </span> <span>5 Years 3 Months</span></p> -->
+										<p><span class="title-s"> Role: </span> <span>web designer</span></p>
+										<!-- <p><span class="title-s">Experience: </span> <span>fresher </span></p> -->
 										<p><span class="title-s">Address: </span> <span>chh.sambhajinagar, India</span></p>
 									  </div>
 									</div>
@@ -550,9 +2007,9 @@
 
 								<div class="skill-mf">
 									<p class="title-s">Skills</p>
-									<span>Web design</span> <span class="pull-right">95%</span>
+									<span>Full stack Development </span> <span class="pull-right">85%</span>
 									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0"
+										<div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0"
 											aria-valuemax="100"></div>
 									</div>
 									
@@ -568,15 +2025,15 @@
 											aria-valuemax="100"></div>
 									</div>
 									
-									<span>Statistical Analysis</span> <span class="pull-right">85%</span>
+									<span>DBMS</span> <span class="pull-right">85%</span>
 									<div class="progress">
 										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
 											aria-valuemax="100"></div>
 									</div>
 									
-									<span>Machine Learning</span> <span class="pull-right">80%</span>
+									<span>DSA</span> <span class="pull-right">70%</span>
 									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="70" aria-valuemin="0"
 											aria-valuemax="100"></div>
 									</div>
 								</div>
@@ -612,7 +2069,7 @@
 							<div class="text">
 								<p class="mb-4">
 									<span class="number" data-number="2">0</span> <span>+</span>
-									<span>&nbsp; Projects completed</span>
+									<span>&NA; Projects completed</span>
 								</p>
 								<p><a href="https://www.linkedin.com/in/rohan-bodkhe-4476bb326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
 							</div>
@@ -632,837 +2089,481 @@
           <div class="col-md-10 heading-section text-center ftco-animate">
           	<h1 class="big big-2">Resume</h1>
             <h2 class="mb-4">Resume</h2>
-            <p>"Aspiring Web Developer with a strong academic foundation in Electronics and Computer Engineering and hands-on experience in Python, data handling, and analytical thinking. Passionate about transforming raw data into meaningful insights to support smarter decision-making."</p>
+<p>
+    Aspiring Web Developer with a strong academic foundation in Electronics
+    and Computer Engineering and hands-on experience in Python, data handling,
+    and analytical thinking. Passionate about transforming raw data into
+    meaningful insights to support smarter decision-making.
+</p>
+
+<div class="resume-buttons mt-4">
+
+    <!-- View Resume -->
+    <a
+        href="https://drive.google.com/file/d/19B8l4QGaLan7nCgmCgDwNtIbBuEgJA-j/view?usp=drivesdk"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="resume-btn resume-view-btn"
+    >
+        <span class="icon-eye"></span>
+        View Resume
+    </a>
+
+    <!-- Download Resume -->
+    <a
+        href="https://drive.google.com/uc?export=download&id=19B8l4QGaLan7nCgmCgDwNtIbBuEgJA-j"
+        class="resume-btn resume-download-btn"
+    >
+        <span class="icon-download"></span>
+        Download Resume
+    </a>
+
+</div>
           </div>
         </div>
 
-		<div class="row">
-			<h1 class="big-4">Education</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-		<div class="row">
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">2025-Present</span>
-						<h2>Project Lead (Personal) —EduTrack App</h2>
-						<!-- <span class="position">Merkle</span> -->
-						<p class="mt-4">Designing a student app inspired by coaching platforms: timetable, study materials, basic chat/help, and admin dashboard. 
-							<ul>
-								<li>Implementing responsive front-end (HTML/CSS/JS, exploring React) and organizing code with components.</li>
-								<li>Writing clear user stories, wireframes, and a release plan; tracking tasks in GitHub Projects.</li>
-								<!-- <li>Designed and executed A/B tests, performed rigorous statistical analysis. Led to 20% MoM increase in the conversion rate.</li> -->
-							</ul>
-						</p>
-					</div>
+	<!-- ================= EDUCATION JOURNEY ================= -->
 
-				</div>
+<div class="row">
+    <h1 class="big-4">Education Journey</h1>
+    <div class="underline"></div>
+</div>
 
-				<div class="col-md-6">
-					<div class="resume-wrap ftco-animate">
-						<span class="date">2022-2023</span>
-						<h2>Course/Education</h2>
-						<!-- <span class="position">iQuanti</span> -->
-						<p class="mt-4">Education Highlights
-							<ul>
-								<li>Coursework: Programming Basics, Applied Mathematics, Electronics/IT fundamentals.</li>
-								<li>Activities: coding practice, basic Linux/terminal usage, version control with Git.</li>
-								<!-- <li>Performed migration and enhancements for merchandising dashboard, involved data integration and its feature improvement.</li> -->
-							</ul>
-						</p>
-					</div>
+<br>
 
-				</div>
-			</div>
+<div class="education-timeline">
 
-		<br>
-		<br>
+    <!-- B.TECH -->
+    <div class="education-item ftco-animate">
+        <div class="education-dot"></div>
 
-		<div class="row">
-			<h1 class="big-4">Education</h1>
-			<div class="underline"></div>
-		</div>
-		<br>
-		
-			<div class="row">
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2024-2028</span>
-    					<h2>Bachelor of Technology</h2>
-    					<span class="position">Maharashtra Institute of Technology (MIT) </span>
-    					<!-- <p class="mt-4">Grade: First class distinction.</p> -->
-    				</div>
-    			</div>
+        <div class="education-card">
 
-    			<div class="col-md-6">
-    				<div class="resume-wrap ftco-animate">
-    					<span class="date">2023-2024</span>
-    					<h2>Diploma in web developement</h2>
-    					<span class="position">STP computer education</span>
-    					<p class="mt-4">Grade:A.</p>
-    				</div>
-				</div>
-    		</div>
+            <span class="education-date">2024 – 2028</span>
 
-    		<div class="row justify-content-center mt-5">
-    			<!-- <div class="col-md-6 text-center ftco-animate">
-    				<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
-    			</div> -->
-    		</div>
-    	</div>
-    </section>
+            <h2>Bachelor of Technology</h2>
 
- 
-<!-- ================= PROJECTS SECTION ================= -->
-<section class="ftco-section project-section" id="project-section">
+            <h3>
+                Electronics &amp; Computer Engineering
+            </h3>
 
-    <div class="container">
+            <span class="education-institute">
+                Maharashtra Institute of Technology (MIT CSN),
+                Chh. Sambhajinagar
+            </span>
 
-        <!-- SECTION HEADING -->
-        <div class="row justify-content-center mb-5 pb-3">
-            <div class="col-md-7 heading-section text-center ftco-animate">
-
-                <h1 class="big big-2">Projects</h1>
-
-                <h2 class="mb-4">My Projects</h2>
+            <div class="education-details">
 
                 <p>
-                    A collection of my web, software, AI and real-world projects.
+                    <strong>Current Year:</strong> Third Year
+                </p>
+
+                <p>
+                    <strong>First Year CGPA:</strong> 8.83 / 10
+                </p>
+
+                <p>
+                    <strong>Second Year CGPA:</strong> 8.88 / 10
+                </p>
+
+                <p>
+                    <strong>Minor:</strong> Double Minor in Cyber Security
                 </p>
 
             </div>
+
+        </div>
+    </div>
+
+
+    <!-- HSC -->
+    <div class="education-item ftco-animate">
+        <div class="education-dot"></div>
+
+        <div class="education-card">
+
+            <span class="education-date">2024</span>
+
+            <h2>Higher Secondary Certificate (HSC)</h2>
+
+            <span class="education-institute">
+                Nath Jr. College, Galle Borgoan,
+                Chhatrapati Sambhajinagar
+            </span>
+
+            <div class="education-details">
+
+                <p>
+                    <strong>Board:</strong>
+                    Maharashtra State Board of Secondary
+                    and Higher Secondary Education, Pune
+                </p>
+
+                <p>
+                    <strong>Percentage:</strong> 74.33%
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+
+
+    <!-- SSC -->
+    <div class="education-item ftco-animate">
+        <div class="education-dot"></div>
+
+        <div class="education-card">
+
+            <span class="education-date">2022</span>
+
+            <h2>Secondary School Certificate (SSC)</h2>
+
+            <span class="education-institute">
+                G.S.V.M. Ellora,
+                Chhatrapati Sambhajinagar
+            </span>
+
+            <div class="education-details">
+
+                <p>
+                    <strong>Board:</strong>
+                    Maharashtra State Board of Secondary
+                    and Higher Secondary Education, Pune
+                </p>
+
+                <p>
+                    <strong>Percentage:</strong> 81.80%
+                </p>
+
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+
+<!-- ================= END EDUCATION JOURNEY ================= -->
+<!-- ==================== PROJECTS SECTION ==================== -->
+<section id="projects" class="projects-section">
+    <div class="container-fluid">
+
+        <div class="section-heading text-center">
+            <span class="section-subtitle">MY WORK</span>
+            <h2>Featured <span>Projects</span></h2>
+            <p>Some of the projects I have designed and developed.</p>
         </div>
 
+        <div class="projects-marquee">
 
-        <!-- PROJECT SLIDER -->
-        <div class="project-slider">
+            <div class="projects-track" id="projectsTrack">
 
-            <div class="project-track">
-
-
-                <!-- ================================================= -->
-                <!-- PROJECT 1 - ATTENDEASE -->
-                <!-- ================================================= -->
-
-                <a href="#"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="https://ibb.co/G4mbVQ2Q">
-
-                    <div class="project-card">
-
-                        <div class="project-image">
-
-                            <img src="https://ibb.co/G4mbVQ2Q"
-                                 alt="AttendEase AI Attendance Management System"
-                                 loading="lazy">
-
-                            <div class="image-overlay">
-                                <i class="bi bi-box-arrow-up-right"></i>
-                            </div>
-
-                        </div>
-
-
-                        <div class="project-content">
-
-                            <span class="project-number">
-                                01
-                            </span>
-
-                            <h3>
-                                AttendEase
-                            </h3>
-
-                            <p>
-                                AI-powered attendance management system with
-                                role-based dashboards, reports and attendance alerts.
-                            </p>
-
-
-                            <div class="project-tech">
-
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                                <span>Firebase</span>
-                                <span>AI</span>
-
-                            </div>
-
-
-                            <div class="project-open">
-
-                                View Project
-
-                                <i class="bi bi-arrow-up-right"></i>
-
-                            </div>
-
-                        </div>
-
+                <!-- PROJECT 1 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img
+                            src="https://i.ibb.co/KcQW43MS/file-000000008e208211adee4feadc2d798d.png"
+                            alt="Bachat Gat Management System"
+                            loading="lazy"
+                        >
                     </div>
 
-                </a>
+                    <div class="project-content">
+                        <span class="project-number">01</span>
+                        <h3>Mahila Bachat Gat Management System</h3>
+                        <p>
+                            Digital management system for managing bachat gat
+                            members, savings, loans, interest and group records.
+                        </p>
 
-
-
-                <!-- ================================================= -->
-                <!-- PROJECT 2 - GURUKRUPA LODGE -->
-                <!-- ================================================= -->
-
-                <a href="https://gurukrupalodge.vercel.app"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="project-card-link">
-
-                    <div class="project-card">
-
-                        <div class="project-image">
-
-                            <img src="https://ibb.co/3mkTNznz"
-                                 alt="Gurukrupa Lodge Booking Website"
-                                 loading="lazy">
-
-                            <div class="image-overlay">
-                                <i class="bi bi-box-arrow-up-right"></i>
-                            </div>
-
+                        <div class="project-tags">
+                            <span>Web App</span>
+                            <span>Management</span>
+                            <span>Database</span>
                         </div>
 
-
-                        <div class="project-content">
-
-                            <span class="project-number">
-                                02
-                            </span>
-
-                            <h3>
-                                Gurukrupa Lodge
-                            </h3>
-
-                            <p>
-                                Responsive lodge booking website with room
-                                information, online booking and payment functionality.
-                            </p>
+                        <a
+                            href="https://tuljabhavani1.vercel.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-btn"
+                        >
+                            View Project
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </article>
 
 
-                            <div class="project-tech">
-
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                                <span>Vercel</span>
-
-                            </div>
-
-
-                            <div class="project-open">
-
-                                View Project
-
-                                <i class="bi bi-arrow-up-right"></i>
-
-                            </div>
-
-                        </div>
-
+                <!-- PROJECT 2 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img
+                            src="https://i.ibb.co/hRcZs7w6/file-0000000030808211a2458b9a4957a45b.png"
+                            alt="Gurukrupa Lodging Website"
+                            loading="lazy"
+                        >
                     </div>
 
-                </a>
+                    <div class="project-content">
+                        <span class="project-number">02</span>
+                        <h3>Gurukrupa Lodging Website</h3>
+                        <p>
+                            Responsive lodging website showcasing rooms,
+                            facilities, services and booking information.
+                        </p>
 
-
-
-                <!-- ================================================= -->
-                <!-- PROJECT 3 - BACHAT GAT -->
-                <!-- ================================================= -->
-
-                <a href="#"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="project-card-link">
-
-                    <div class="project-card">
-
-                        <div class="project-image">
-
-                            <img src="images/bachat-gat.jpg"
-                                 alt="Bachat Gat Management System"
-                                 loading="lazy">
-
-                            <div class="image-overlay">
-                                <i class="bi bi-box-arrow-up-right"></i>
-                            </div>
-
+                        <div class="project-tags">
+                            <span>Web Design</span>
+                            <span>Responsive</span>
+                            <span>Booking</span>
                         </div>
 
-
-                        <div class="project-content">
-
-                            <span class="project-number">
-                                03
-                            </span>
-
-                            <h3>
-                                Bachat Gat Management
-                            </h3>
-
-                            <p>
-                                Digital management system for recording members,
-                                savings, meetings, loans and transactions.
-                            </p>
+                        <a
+                            href="https://gurukrupalodging.vercel.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-btn"
+                        >
+                            View Project
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </article>
 
 
-                            <div class="project-tech">
-
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                                <span>Firebase</span>
-
-                            </div>
-
-
-                            <div class="project-open">
-
-                                View Project
-
-                                <i class="bi bi-arrow-up-right"></i>
-
-                            </div>
-
-                        </div>
-
+                <!-- PROJECT 3 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img
+                            src="https://i.ibb.co/7dpVv31j/file-000000002f0882088013e7425d749c9a.png"
+                            alt="AttendEase Management System"
+                            loading="lazy"
+                        >
                     </div>
 
-                </a>
+                    <div class="project-content">
+                        <span class="project-number">03</span>
+                        <h3>AttendEase Management System</h3>
+                        <p>
+                            Attendance management platform with role-based
+                            access, tracking, dashboards, courses and reports.
+                        </p>
 
-
-
-                <!-- ================================================= -->
-                <!-- PROJECT 4 - SMART PARKING -->
-                <!-- ================================================= -->
-
-                <a href="#"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="project-card-link">
-
-                    <div class="project-card">
-
-                        <div class="project-image">
-
-                            <img src="images/smart-parking.jpg"
-                                 alt="Smart Car Parking Toll Gate System"
-                                 loading="lazy">
-
-                            <div class="image-overlay">
-                                <i class="bi bi-box-arrow-up-right"></i>
-                            </div>
-
+                        <div class="project-tags">
+                            <span>Management</span>
+                            <span>RBAC</span>
+                            <span>Reports</span>
                         </div>
 
-
-                        <div class="project-content">
-
-                            <span class="project-number">
-                                04
-                            </span>
-
-                            <h3>
-                                Smart Car Parking
-                            </h3>
-
-                            <p>
-                                Smart parking and toll gate system designed to
-                                simplify vehicle entry, parking and payment management.
-                            </p>
+                        <a
+                            href="https://demor-lmsc-seven.vercel.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-btn"
+                        >
+                            View Project
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </article>
 
 
-                            <div class="project-tech">
-
-                                <span>IoT</span>
-                                <span>Arduino</span>
-                                <span>Web</span>
-                                <span>Database</span>
-
-                            </div>
-
-
-                            <div class="project-open">
-
-                                View Project
-
-                                <i class="bi bi-arrow-up-right"></i>
-
-                            </div>
-
-                        </div>
-
+                <!-- PROJECT 4 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img
+                            src="https://i.ibb.co/SwWyQNNj/file-00000000db308211a84bd553331c8f28.png"
+                            alt="Paryantan-X Smart Trip Planner"
+                            loading="lazy"
+                        >
                     </div>
 
-                </a>
+                    <div class="project-content">
+                        <span class="project-number">04</span>
+                        <h3>Paryantan-X Smart Trip Planner</h3>
+                        <p>
+                            AI-powered tourism and trip-planning platform for
+                            personalized itineraries based on travel needs.
+                        </p>
 
-
-
-                <!-- ================================================= -->
-                <!-- PROJECT 5 - TULJABHAVANI -->
-                <!-- ================================================= -->
-
-                <a href="https://tuljabhavani1.vercel.app"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="project-card-link">
-
-                    <div class="project-card">
-
-                        <div class="project-image">
-
-                            <img src="images/tuljabhavani.jpg"
-                                 alt="Tuljabhavani Women Saving Group System"
-                                 loading="lazy">
-
-                            <div class="image-overlay">
-                                <i class="bi bi-box-arrow-up-right"></i>
-                            </div>
-
+                        <div class="project-tags">
+                            <span>AI</span>
+                            <span>Travel</span>
+                            <span>Smart Planner</span>
                         </div>
 
-
-                        <div class="project-content">
-
-                            <span class="project-number">
-                                05
-                            </span>
-
-                            <h3>
-                                Tuljabhavani Bachat Gat
-                            </h3>
-
-                            <p>
-                                Marathi digital system for managing women's
-                                self-help group savings, meetings and loan records.
-                            </p>
+                        <!-- Replace href with your existing Paryantan-X URL -->
+                        <a
+                            href="#"
+                            class="project-btn"
+                            onclick="return false;"
+                        >
+                            View Project
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </article>
 
 
-                            <div class="project-tech">
-
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                                <span>Firebase</span>
-
-                            </div>
-
-
-                            <div class="project-open">
-
-                                View Project
-
-                                <i class="bi bi-arrow-up-right"></i>
-
-                            </div>
-
-                        </div>
-
+                <!-- PROJECT 5 -->
+                <article class="project-card">
+                    <div class="project-image project-external-image">
+                        <!-- Replace this with your PUBLIC external image URL -->
+                        <img
+                            src="YOUR_CHINCHOLI_EXTERNAL_IMAGE_URL"
+                            alt="Chincholi Village Website"
+                            loading="lazy"
+                        >
                     </div>
 
-                </a>
+                    <div class="project-content">
+                        <span class="project-number">05</span>
+                        <h3>Chincholi Village Website</h3>
+                        <p>
+                            Digital village website providing information about
+                            Chincholi, culture, places, services and announcements.
+                        </p>
 
-
-
-                <!-- ================================================= -->
-                <!-- PROJECT 6 - PARYATAN-X -->
-                <!-- ================================================= -->
-
-                <a href="#"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="project-card-link">
-
-                    <div class="project-card">
-
-                        <div class="project-image">
-
-                            <img src="images/paryatan-x.jpg"
-                                 alt="PARyatan-X Smart Tourism Platform"
-                                 loading="lazy">
-
-                            <div class="image-overlay">
-                                <i class="bi bi-box-arrow-up-right"></i>
-                            </div>
-
+                        <div class="project-tags">
+                            <span>Web Development</span>
+                            <span>Village Portal</span>
+                            <span>Responsive</span>
                         </div>
 
-
-                        <div class="project-content">
-
-                            <span class="project-number">
-                                06
-                            </span>
-
-                            <h3>
-                                PARyatan-X
-                            </h3>
-
-                            <p>
-                                AI-powered smart tourism platform with itinerary
-                                planning, AR navigation, multilingual support
-                                and local discovery.
-                            </p>
+                        <a
+                            href="https://chincholi.vercel.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-btn"
+                        >
+                            View Project
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </article>
 
 
-                            <div class="project-tech">
-
-                                <span>AI</span>
-                                <span>AR</span>
-                                <span>Maps</span>
-                                <span>Web</span>
-
-                            </div>
-
-
-                            <div class="project-open">
-
-                                View Project
-
-                                <i class="bi bi-arrow-up-right"></i>
-
-                            </div>
-
-                        </div>
-
+                <!-- PROJECT 6 -->
+                <article class="project-card">
+                    <div class="project-image project-external-image">
+                        <!-- Replace this with your PUBLIC external image URL -->
+                        <img
+                            src="YOUR_DAIRYFLOW_EXTERNAL_IMAGE_URL"
+                            alt="Dairy Flow Milk Management System"
+                            loading="lazy"
+                        >
                     </div>
 
-                </a>
+                    <div class="project-content">
+                        <span class="project-number">06</span>
+                        <h3>Dairy Flow – Milk Management System</h3>
+                        <p>
+                            Milk-management platform for dairy operations,
+                            milk records, customers, sales and reports.
+                        </p>
 
-
-
-                <!-- ================================================= -->
-                <!-- DUPLICATE CARDS FOR INFINITE SCROLLING -->
-                <!-- ================================================= -->
-
-
-                <!-- PROJECT 1 DUPLICATE -->
-
-                <a href="#"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="project-card-link">
-
-                    <div class="project-card">
-
-                        <div class="project-image">
-
-                            <img src="images/attendease.jpg"
-                                 alt="AttendEase"
-                                 loading="lazy">
-
-                            <div class="image-overlay">
-                                <i class="bi bi-box-arrow-up-right"></i>
-                            </div>
-
+                        <div class="project-tags">
+                            <span>Management</span>
+                            <span>Milk Records</span>
+                            <span>Dashboard</span>
                         </div>
 
-                        <div class="project-content">
+                        <a
+                            href="https://dairyflow-eight.vercel.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-btn"
+                        >
+                            View Project
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </article>
 
-                            <span class="project-number">01</span>
 
-                            <h3>AttendEase</h3>
-
-                            <p>
-                                AI-powered attendance management system with
-                                role-based dashboards, reports and attendance alerts.
-                            </p>
-
-                            <div class="project-tech">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                                <span>Firebase</span>
-                                <span>AI</span>
-                            </div>
-
-                            <div class="project-open">
-                                View Project
-                                <i class="bi bi-arrow-up-right"></i>
-                            </div>
-
-                        </div>
-
+                <!-- PROJECT 7 -->
+                <article class="project-card">
+                    <div class="project-image project-external-image">
+                        <!-- Replace this with your PUBLIC external image URL -->
+                        <img
+                            src="YOUR_EXAMVAULT_EXTERNAL_IMAGE_URL"
+                            alt="ExamVault Previous Year Papers"
+                            loading="lazy"
+                        >
                     </div>
 
-                </a>
+                    <div class="project-content">
+                        <span class="project-number">07</span>
+                        <h3>ExamVault – Previous Year Papers</h3>
+                        <p>
+                            Platform for engineering students to access and
+                            organize previous-year question papers.
+                        </p>
 
-
-
-                <!-- PROJECT 2 DUPLICATE -->
-
-                <a href="https://gurukrupalodge1.vercel.app"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="project-card-link">
-
-                    <div class="project-card">
-
-                        <div class="project-image">
-
-                            <img src="images/gurukrupa-lodge.jpg"
-                                 alt="Gurukrupa Lodge"
-                                 loading="lazy">
-
-                            <div class="image-overlay">
-                                <i class="bi bi-box-arrow-up-right"></i>
-                            </div>
-
+                        <div class="project-tags">
+                            <span>Education</span>
+                            <span>Question Papers</span>
+                            <span>Web App</span>
                         </div>
 
-                        <div class="project-content">
+                        <a
+                            href="https://examvalute.vercel.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-btn"
+                        >
+                            View Project
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
+                    </div>
+                </article>
 
-                            <span class="project-number">02</span>
 
-                            <h3>Gurukrupa Lodge</h3>
-
-                            <p>
-                                Responsive lodge booking website with room
-                                information, online booking and payment functionality.
-                            </p>
-
-                            <div class="project-tech">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                                <span>Vercel</span>
-                            </div>
-
-                            <div class="project-open">
-                                View Project
-                                <i class="bi bi-arrow-up-right"></i>
-                            </div>
-
-                        </div>
-
+                <!-- PROJECT 8 -->
+                <article class="project-card">
+                    <div class="project-image project-external-image">
+                        <!-- Replace this with your PUBLIC external image URL -->
+                        <img
+                            src="YOUR_SHONA_AI_EXTERNAL_IMAGE_URL"
+                            alt="Shona AI Assistant"
+                            loading="lazy"
+                        >
                     </div>
 
-                </a>
+                    <div class="project-content">
+                        <span class="project-number">08</span>
+                        <h3>Shona AI Assistant</h3>
+                        <p>
+                            AI-powered assistant designed for interactive
+                            conversations and intelligent assistance.
+                        </p>
 
-
-
-                <!-- PROJECT 3 DUPLICATE -->
-
-                <a href="#"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="project-card-link">
-
-                    <div class="project-card">
-
-                        <div class="project-image">
-
-                            <img src="images/bachat-gat.jpg"
-                                 alt="Bachat Gat Management"
-                                 loading="lazy">
-
-                            <div class="image-overlay">
-                                <i class="bi bi-box-arrow-up-right"></i>
-                            </div>
-
+                        <div class="project-tags">
+                            <span>AI</span>
+                            <span>Assistant</span>
+                            <span>Web App</span>
                         </div>
 
-                        <div class="project-content">
-
-                            <span class="project-number">03</span>
-
-                            <h3>Bachat Gat Management</h3>
-
-                            <p>
-                                Digital management system for recording members,
-                                savings, meetings, loans and transactions.
-                            </p>
-
-                            <div class="project-tech">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                                <span>Firebase</span>
-                            </div>
-
-                            <div class="project-open">
-                                View Project
-                                <i class="bi bi-arrow-up-right"></i>
-                            </div>
-
-                        </div>
-
+                        <a
+                            href="https://shona-ai.vercel.app/"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="project-btn"
+                        >
+                            View Project
+                            <i class="bi bi-arrow-up-right"></i>
+                        </a>
                     </div>
-
-                </a>
-
-
-
-                <!-- PROJECT 4 DUPLICATE -->
-
-                <a href="#"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="project-card-link">
-
-                    <div class="project-card">
-
-                        <div class="project-image">
-
-                            <img src="images/smart-parking.jpg"
-                                 alt="Smart Car Parking"
-                                 loading="lazy">
-
-                            <div class="image-overlay">
-                                <i class="bi bi-box-arrow-up-right"></i>
-                            </div>
-
-                        </div>
-
-                        <div class="project-content">
-
-                            <span class="project-number">04</span>
-
-                            <h3>Smart Car Parking</h3>
-
-                            <p>
-                                Smart parking and toll gate system designed to
-                                simplify vehicle entry, parking and payment management.
-                            </p>
-
-                            <div class="project-tech">
-                                <span>IoT</span>
-                                <span>Arduino</span>
-                                <span>Web</span>
-                                <span>Database</span>
-                            </div>
-
-                            <div class="project-open">
-                                View Project
-                                <i class="bi bi-arrow-up-right"></i>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </a>
-
-
-
-                <!-- PROJECT 5 DUPLICATE -->
-
-                <a href="https://tuljabhavani1.vercel.app"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="project-card-link">
-
-                    <div class="project-card">
-
-                        <div class="project-image">
-
-                            <img src="images/tuljabhavani.jpg"
-                                 alt="Tuljabhavani Bachat Gat"
-                                 loading="lazy">
-
-                            <div class="image-overlay">
-                                <i class="bi bi-box-arrow-up-right"></i>
-                            </div>
-
-                        </div>
-
-                        <div class="project-content">
-
-                            <span class="project-number">05</span>
-
-                            <h3>Tuljabhavani Bachat Gat</h3>
-
-                            <p>
-                                Marathi digital system for managing women's
-                                self-help group savings, meetings and loan records.
-                            </p>
-
-                            <div class="project-tech">
-                                <span>HTML</span>
-                                <span>CSS</span>
-                                <span>JavaScript</span>
-                                <span>Firebase</span>
-                            </div>
-
-                            <div class="project-open">
-                                View Project
-                                <i class="bi bi-arrow-up-right"></i>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </a>
-
-
-
-                <!-- PROJECT 6 DUPLICATE -->
-
-                <a href="#"
-                   target="_blank"
-                   rel="noopener noreferrer"
-                   class="project-card-link">
-
-                    <div class="project-card">
-
-                        <div class="project-image">
-
-                            <img src="images/paryatan-x.jpg"
-                                 alt="PARyatan-X"
-                                 loading="lazy">
-
-                            <div class="image-overlay">
-                                <i class="bi bi-box-arrow-up-right"></i>
-                            </div>
-
-                        </div>
-
-                        <div class="project-content">
-
-                            <span class="project-number">06</span>
-
-                            <h3>PARyatan-X</h3>
-
-                            <p>
-                                AI-powered smart tourism platform with itinerary
-                                planning, AR navigation, multilingual support
-                                and local discovery.
-                            </p>
-
-                            <div class="project-tech">
-                                <span>AI</span>
-                                <span>AR</span>
-                                <span>Maps</span>
-                                <span>Web</span>
-                            </div>
-
-                            <div class="project-open">
-                                View Project
-                                <i class="bi bi-arrow-up-right"></i>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                </a>
-
+                </article>
 
             </div>
         </div>
 
     </div>
-
 </section>
+ 
 <!-- ================= END PROJECTS SECTION ================= -->
 
 	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
@@ -1546,7 +2647,7 @@
           			<span class="icon-phone2"></span>
           		</div>
           		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel://7823******">+ 7823******</a></p>
+	            <p><a href="tel://7823890695">+ 7823890695</a></p>
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -1555,7 +2656,7 @@
           			<span class="icon-paper-plane"></span>
           		</div>
           		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:info@yoursite.com">rupeshpatil4586@gmail.com</a></p>
+	            <p><a href="mailto:info@yoursite.com">rohanbodkhe645@gmail.com</a></p>
 	          </div>
           </div>
           <div class="col-md-6 col-lg-3 d-flex ftco-animate">
@@ -1564,7 +2665,7 @@
           			<span class="icon-globe"></span>
           		</div>
           		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="https://www.overleaf.com/project/69347a02d10f4dd7b23857f6">resumelink</a></p>
+	            <p><a href="https://drive.google.com/file/d/19B8l4QGaLan7nCgmCgDwNtIbBuEgJA-j/view?usp=drivesdk">resumelink</a></p>
 	          </div>
           </div>
 
