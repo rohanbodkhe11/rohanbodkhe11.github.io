@@ -1,2731 +1,2546 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta name="google-site-verification" content="w10_uBp3ZevkA-QnRk7KsR-6wb35wJ37gf8E392Zfxo" />
-    <meta property="og:url" content="https://rohanbodkhe11.github.io">	  
-    <title>Rohan Bodkhe Portfolio</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    
-    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/aos.css">
+    <title>Rohan Santosh Bodkhe | Portfolio</title>
 
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
+    <meta name="description"
+        content="Rohan Santosh Bodkhe - Electronics and Computer Engineering student, Web Developer and Cyber Security enthusiast.">
+
+    <!-- Bootstrap -->
+    <link rel="stylesheet"
+        href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <style>
+
+        /* =====================================================
+           GLOBAL
+        ===================================================== */
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background:
+                radial-gradient(circle at 10% 10%, rgba(0, 217, 255, .08), transparent 25%),
+                radial-gradient(circle at 90% 20%, rgba(168, 85, 247, .08), transparent 25%),
+                #070b14;
+            color: #e5e7eb;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none !important;
+        }
+
+        .container,
+        .container-fluid {
+            position: relative;
+            z-index: 2;
+        }
+
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        .section-heading {
+            margin-bottom: 55px;
+        }
+
+        .section-subtitle {
+            display: inline-block;
+            color: #22d3ee;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .section-heading h2 {
+            color: #ffffff;
+            font-size: 38px;
+            font-weight: 800;
+            margin-bottom: 15px;
+        }
+
+        .section-heading h2 span {
+            color: #22d3ee;
+        }
+
+        .section-heading p {
+            color: #cbd5e1;
+            font-size: 14px;
+        }
 
 
+        /* =====================================================
+           NAVBAR
+        ===================================================== */
 
-<style>
+        .navbar {
+            background: rgba(7, 11, 20, .92) !important;
+            backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(255,255,255,.08);
+        }
+
+        .navbar-brand {
+            color: #ffffff !important;
+            font-size: 25px;
+            font-weight: 800;
+        }
+
+        .navbar-brand span {
+            color: #22d3ee;
+        }
+
+        .navbar-nav .nav-link {
+            color: #dbeafe !important;
+            font-size: 14px;
+            font-weight: 500;
+            margin: 0 8px;
+            transition: .3s ease;
+        }
+
+        .navbar-nav .nav-link:hover {
+            color: #22d3ee !important;
+        }
+
+        .navbar-toggler {
+            border-color: rgba(255,255,255,.2);
+        }
+
+        .navbar-toggler-icon {
+            background-image: none;
+        }
+
+        .navbar-toggler-icon::before {
+            content: "\f0c9";
+            font-family: "Font Awesome 6 Free";
+            font-weight: 900;
+            color: #ffffff;
+        }
 
 
-/* =========================================================
-   ABOUT SECTION - COMPLETE CORRECTED CSS
-   ========================================================= */
+        /* =====================================================
+           HERO
+        ===================================================== */
 
-/* Main About Box */
-.about-mf .box-shadow-full {
-    padding-top: 4rem;
-    padding-bottom: 4rem;
-    padding-left: 3rem;
-    padding-right: 3rem;
+        #home-section {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+            padding-top: 80px;
+        }
+
+        #home-section::before {
+            content: "";
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            background: rgba(0, 217, 255, .10);
+            filter: blur(100px);
+            border-radius: 50%;
+            left: -150px;
+            top: 20%;
+        }
+
+        #home-section::after {
+            content: "";
+            position: absolute;
+            width: 450px;
+            height: 450px;
+            background: rgba(168, 85, 247, .10);
+            filter: blur(100px);
+            border-radius: 50%;
+            right: -150px;
+            bottom: 10%;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .hero-small {
+            color: #22d3ee;
+            font-size: 15px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            margin-bottom: 15px;
+        }
+
+        .hero-title {
+            color: #ffffff;
+            font-size: clamp(42px, 7vw, 75px);
+            font-weight: 800;
+            line-height: 1.1;
+            margin-bottom: 15px;
+        }
+
+        .hero-title span {
+            color: #22d3ee;
+        }
+
+        .hero-subtitle {
+            color: #cbd5e1;
+            font-size: 22px;
+            font-weight: 500;
+            margin-bottom: 25px;
+        }
+
+        #typing-animation {
+            color: #67e8f9 !important;
+            font-weight: 700;
+            text-shadow: 0 0 12px rgba(34,211,238,.35);
+        }
+
+        .hero-description {
+            max-width: 650px;
+            color: #cbd5e1;
+            line-height: 1.9;
+            font-size: 15px;
+            margin-bottom: 30px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .hero-btn {
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            transition: .3s ease;
+        }
+
+        .hero-btn-primary {
+            background: linear-gradient(90deg,#06b6d4,#6366f1);
+            color: #ffffff !important;
+        }
+
+        .hero-btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(6,182,212,.25);
+        }
+
+        .hero-btn-outline {
+            border: 1px solid #22d3ee;
+            color: #67e8f9 !important;
+        }
+
+        .hero-btn-outline:hover {
+            background: #22d3ee;
+            color: #07111d !important;
+        }
+
+
+        /* =====================================================
+           ABOUT SECTION
+        ===================================================== */
+
+        .about-mf .box-shadow-full {
+            padding: 50px;
+            background: linear-gradient(
+                135deg,
+                #101827 0%,
+                #18243d 50%,
+                #241b3d 100%
+            );
+
+            border: 1px solid rgba(0, 217, 255, 0.18);
+            border-radius: 20px;
+
+            box-shadow:
+                0 20px 50px rgba(0, 0, 0, 0.35),
+                0 0 30px rgba(0, 217, 255, 0.06);
+        }
+
+        .about-mf p {
+            color: #e5e7eb !important;
+            line-height: 1.8;
+        }
+
+        .about-mf h1,
+        .about-mf h2,
+        .about-mf h3 {
+            color: #ffffff !important;
+        }
+
+        .about-mf .heading-section p {
+            color: #e2e8f0 !important;
+            line-height: 1.8;
+        }
+
+        .about-mf .about-info p {
+            color: #e5e7eb !important;
+        }
+
+        .about-mf .about-info .title-s {
+            color: #22d3ee !important;
+            font-weight: 700;
+        }
+
+        .about-mf .about-info p span:not(.title-s) {
+            color: #f8fafc !important;
+        }
+
+        .about-mf .skill-mf .title-s {
+            color: #22d3ee !important;
+            font-weight: 700;
+        }
+
+        .about-mf .skill-mf > span {
+            color: #f1f5f9 !important;
+        }
+
+        .about-mf .skill-mf .pull-right {
+            color: #67e8f9 !important;
+            font-weight: 700;
+        }
+
+        .about-mf .skill-mf .progress {
+            margin: .5rem 0 1.2rem;
+            height: .7rem;
+            background: rgba(255,255,255,.12) !important;
+            border-radius: 50px;
+            overflow: hidden;
+        }
+
+        .about-mf .skill-mf .progress .progress-bar {
+            height: .7rem;
+            background: linear-gradient(
+                90deg,
+                #06b6d4,
+                #6366f1,
+                #a855f7
+            ) !important;
+            border-radius: 50px;
+            box-shadow: 0 0 12px rgba(34,211,238,.35);
+        }
+
+        .about-mf .about-info {
+            color: #f1f5f9 !important;
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .about-mf .about-info li {
+            color: #e5e7eb !important;
+            margin-bottom: 10px;
+        }
+
+        .about-mf .about-info li span:first-child {
+            color: #22d3ee !important;
+            font-weight: 700;
+        }
+
+        .about-mf .about-info li span:last-child {
+            color: #f8fafc !important;
+        }
+
+        .about-img img {
+            width: 100%;
+            max-width: 280px;
+            border-radius: 20px;
+            border: 2px solid rgba(34,211,238,.3);
+            box-shadow: 0 15px 40px rgba(0,0,0,.4);
+        }
+
+
+        /* =====================================================
+           RESUME
+        ===================================================== */
+
+        #resume-section {
+            padding: 100px 0;
+        }
+
+        .resume-buttons {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .resume-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 9px;
+            min-width: 165px;
+            padding: 12px 22px;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            text-decoration: none !important;
+            transition: .3s ease;
+        }
+
+        .resume-view-btn {
+            background: #111827;
+            color: #ffffff !important;
+            border: 1px solid #334155;
+        }
+
+        .resume-view-btn:hover {
+            background: #000000;
+            color: #ffffff !important;
+            border-color: #00d9ff;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,.25);
+        }
+
+        .resume-download-btn {
+            background: #ffbd39;
+            color: #111827 !important;
+            border: 1px solid #ffbd39;
+        }
+
+        .resume-download-btn:hover {
+            background: #e5a82f;
+            color: #111827 !important;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0,0,0,.2);
+        }
+
+
+        /* =====================================================
+           EDUCATION JOURNEY
+        ===================================================== */
+
+        .education-timeline {
+            position: relative;
+            max-width: 950px;
+            margin: 0 auto;
+            padding: 10px 0 20px;
+        }
+
+        .education-timeline::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 24px;
+            width: 2px;
+            background: linear-gradient(
+                to bottom,
+                #22d3ee,
+                #a855f7,
+                rgba(255,189,57,.15)
+            );
+        }
+
+        .education-item {
+            position: relative;
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 35px;
+            padding-left: 70px;
+        }
+
+        .education-dot {
+            position: absolute;
+            left: 14px;
+            top: 28px;
+            width: 22px;
+            height: 22px;
+            border-radius: 50%;
+            background: #22d3ee;
+            border: 5px solid #111827;
+            box-shadow:
+                0 0 0 2px #22d3ee,
+                0 0 15px rgba(34,211,238,.45);
+            z-index: 2;
+        }
+
+        .education-card {
+            position: relative;
+            width: 100%;
+            padding: 30px;
+            border-radius: 18px;
+            background: linear-gradient(
+                135deg,
+                rgba(20,30,60,.96),
+                rgba(48,28,78,.96)
+            );
+            border: 1px solid rgba(255,255,255,.14);
+            box-shadow:
+                0 15px 40px rgba(0,0,0,.30),
+                inset 0 1px 0 rgba(255,255,255,.08);
+            overflow: hidden;
+            transition: .35s ease;
+        }
+
+        .education-card::before {
+            content: "";
+            position: absolute;
+            width: 180px;
+            height: 180px;
+            top: -90px;
+            right: -70px;
+            background: rgba(34,211,238,.16);
+            filter: blur(50px);
+            border-radius: 50%;
+        }
+
+        .education-card::after {
+            content: "";
+            position: absolute;
+            width: 150px;
+            height: 150px;
+            bottom: -80px;
+            left: -60px;
+            background: rgba(168,85,247,.16);
+            filter: blur(50px);
+            border-radius: 50%;
+        }
+
+        .education-card > * {
+            position: relative;
+            z-index: 2;
+        }
+
+        .education-item:nth-child(1) .education-card {
+            background: linear-gradient(
+                135deg,
+                #102a43,
+                #183b56,
+                #34245c
+            );
+            border-color: rgba(0,217,255,.30);
+        }
+
+        .education-item:nth-child(2) .education-card {
+            background: linear-gradient(
+                135deg,
+                #382050,
+                #51265f,
+                #263c70
+            );
+            border-color: rgba(168,85,247,.30);
+        }
+
+        .education-item:nth-child(3) .education-card {
+            background: linear-gradient(
+                135deg,
+                #173f3b,
+                #155e63,
+                #244b70
+            );
+            border-color: rgba(45,212,191,.30);
+        }
+
+        .education-card:hover {
+            transform: translateY(-8px) scale(1.01);
+            border-color: rgba(255,255,255,.40);
+            box-shadow:
+                0 22px 55px rgba(0,0,0,.40),
+                0 0 30px rgba(0,217,255,.10);
+        }
+
+        .education-date {
+            display: inline-block;
+            padding: 6px 14px;
+            margin-bottom: 12px;
+            border-radius: 50px;
+            background: rgba(255,255,255,.14);
+            border: 1px solid rgba(255,255,255,.25);
+            color: #ffffff !important;
+            font-size: 12px;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+
+        .education-card h2 {
+            margin: 5px 0 8px;
+            color: #ffffff !important;
+            font-size: 23px;
+            font-weight: 700;
+            line-height: 1.35;
+        }
+
+        .education-card h3 {
+            margin: 0 0 10px;
+            color: #67e8f9 !important;
+            font-size: 16px;
+            font-weight: 600;
+            line-height: 1.5;
+        }
+
+        .education-institute {
+            display: block;
+            margin-bottom: 17px;
+            color: #f1f5f9 !important;
+            opacity: 1 !important;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        .education-details {
+            margin-top: 14px;
+            padding-top: 14px;
+            border-top: 1px solid rgba(255,255,255,.16);
+        }
+
+        .education-details p {
+            margin: 7px 0;
+            color: #e2e8f0 !important;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.6;
+        }
+
+        .education-details strong {
+            color: #ffffff !important;
+            font-weight: 700;
+        }
+
+
+        /* =====================================================
+           PROJECTS
+        ===================================================== */
+
+        .projects-section {
+            padding: 100px 0;
+            overflow: hidden;
+        }
+
+        .projects-marquee {
+            width: 100%;
+            overflow-x: auto;
+            overflow-y: hidden;
+            padding: 15px 5px 30px;
+            scrollbar-width: thin;
+        }
+
+        .projects-track {
+            display: flex;
+            gap: 25px;
+            width: max-content;
+        }
+
+        .project-card {
+            width: 350px;
+            min-width: 350px;
+            background: linear-gradient(
+                145deg,
+                #101827,
+                #18233c
+            );
+            border: 1px solid rgba(255,255,255,.10);
+            border-radius: 18px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0,0,0,.30);
+            transition: .35s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: rgba(34,211,238,.45);
+            box-shadow:
+                0 20px 50px rgba(0,0,0,.40),
+                0 0 25px rgba(34,211,238,.10);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 205px;
+            overflow: hidden;
+            background: #111827;
+        }
+
+        .project-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform .5s ease;
+        }
+
+        .project-card:hover .project-image img {
+            transform: scale(1.06);
+        }
+
+        .project-content {
+            padding: 25px;
+        }
+
+        .project-content h3 {
+            color: #ffffff !important;
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 1.4;
+            margin-bottom: 12px;
+        }
+
+        .project-content p {
+            color: #dbe4f0 !important;
+            font-size: 13px;
+            line-height: 1.7;
+            min-height: 68px;
+            margin-bottom: 18px;
+        }
+
+        .project-tags {
+            display: flex;
+            gap: 7px;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+
+        .project-tags span {
+            padding: 5px 9px;
+            border-radius: 20px;
+            background: rgba(34,211,238,.10);
+            border: 1px solid rgba(34,211,238,.20);
+            color: #67e8f9;
+            font-size: 11px;
+            font-weight: 600;
+        }
+
+        .project-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+            padding: 9px 17px;
+            border-radius: 7px;
+            background: #111827;
+            border: 1px solid #334155;
+            color: #ffffff !important;
+            font-size: 12px;
+            font-weight: 600;
+            transition: .3s ease;
+        }
+
+        .project-btn:hover {
+            background: #22d3ee;
+            color: #07111d !important;
+            border-color: #22d3ee;
+        }
+
+
+        /* =====================================================
+           CONTACT
+        ===================================================== */
+
+        .contact-card {
+            padding: 35px;
+            background: linear-gradient(
+                135deg,
+                #101827,
+                #1b2340
+            );
+            border: 1px solid rgba(255,255,255,.10);
+            border-radius: 18px;
+        }
+
+        .contact-card h3 {
+            color: #ffffff;
+            font-weight: 700;
+        }
+
+        .contact-card p {
+            color: #cbd5e1;
+            line-height: 1.8;
+        }
+
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 18px;
+        }
+
+        .contact-icon {
+            width: 42px;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            background: rgba(34,211,238,.10);
+            color: #22d3ee;
+        }
+
+        .contact-item a {
+            color: #e5e7eb !important;
+        }
+
+        .contact-item a:hover {
+            color: #22d3ee !important;
+        }
+
+
+        /* =====================================================
+           FOOTER
+        ===================================================== */
+
+        footer {
+            padding: 30px 0;
+            border-top: 1px solid rgba(255,255,255,.08);
+            text-align: center;
+        }
+
+        footer p {
+            margin: 0;
+            color: #94a3b8;
+            font-size: 13px;
+        }
+
+
+        /* =====================================================
+           MOBILE
+        ===================================================== */
+
+        @media (max-width: 768px) {
+
+            .section-padding,
+            #resume-section,
+            .projects-section {
+                padding: 75px 0;
+            }
+
+            .section-heading h2 {
+                font-size: 30px;
+            }
+
+            .about-mf .box-shadow-full {
+                padding: 25px;
+                background: linear-gradient(
+                    145deg,
+                    #101827,
+                    #1c2945
+                );
+            }
+
+            .hero-title {
+                font-size: 45px;
+            }
+
+            .hero-subtitle {
+                font-size: 18px;
+            }
+
+            .education-timeline::before {
+                left: 16px;
+            }
+
+            .education-item {
+                padding-left: 50px;
+            }
+
+            .education-dot {
+                left: 6px;
+                width: 20px;
+                height: 20px;
+            }
+
+            .education-card {
+                padding: 22px;
+            }
+
+            .education-card h2 {
+                font-size: 19px;
+            }
+
+            .project-card {
+                width: 300px;
+                min-width: 300px;
+            }
+
+            .project-image {
+                height: 175px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .hero-title {
+                font-size: 38px;
+            }
+
+            .hero-buttons {
+                flex-direction: column;
+            }
+
+            .hero-btn {
+                width: 100%;
+                text-align: center;
+            }
+
+            .resume-buttons {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            .resume-btn {
+                width: 100%;
+                max-width: 260px;
+            }
+
+            .project-card {
+                width: 285px;
+                min-width: 285px;
+            }
+        }
+
+
+/* =====================================================
+   PROFESSIONAL CONTACT SECTION
+   ===================================================== */
+
+.contact-section {
+    position: relative;
+    padding-bottom: 90px;
+}
+
+.contact-section .heading-section p {
+    color: #dbe4f0 !important;
+}
+
+/* Contact Information Card */
+.contact-info-card,
+.contact-form-card {
+    height: 100%;
+    padding: 35px;
+    border-radius: 20px;
 
     background: linear-gradient(
         135deg,
-        #0b1220 0%,
-        #111c35 45%,
-        #24163d 100%
+        #101827 0%,
+        #17243c 55%,
+        #251b40 100%
     );
 
-    border: 1px solid rgba(0, 217, 255, 0.22);
-    border-radius: 22px;
+    border: 1px solid rgba(0, 217, 255, 0.18);
 
     box-shadow:
-        0 20px 50px rgba(0, 0, 0, 0.35),
-        0 0 35px rgba(0, 217, 255, 0.06);
+        0 20px 50px rgba(0, 0, 0, 0.30),
+        0 0 30px rgba(0, 217, 255, 0.05);
 
-    overflow: hidden;
+    transition: all 0.35s ease;
 }
 
-
-/* =========================================================
-   ABOUT IMAGE
-   ========================================================= */
-
-.about-mf .about-img {
-    margin-bottom: 2rem;
-}
-
-.about-mf .about-img img {
-    margin-left: 10px;
-    border-radius: 15px;
-    max-width: 100%;
-    height: auto;
-
-    box-shadow:
-        0 12px 30px rgba(0, 0, 0, 0.35),
-        0 0 20px rgba(0, 217, 255, 0.12);
-
-    transition: transform 0.3s ease,
-                box-shadow 0.3s ease;
-}
-
-.about-mf .about-img img:hover {
-    transform: scale(1.03);
-
-    box-shadow:
-        0 18px 40px rgba(0, 0, 0, 0.45),
-        0 0 30px rgba(0, 217, 255, 0.20);
-}
-
-
-/* =========================================================
-   ABOUT TEXT
-   ========================================================= */
-
-.about-mf p {
-    color: #e5e7eb !important;
-    font-size: 15px;
-    line-height: 1.8;
-}
-
-.about-mf h1,
-.about-mf h2,
-.about-mf h3 {
-    color: #ffffff !important;
-}
-
-.about-mf .heading-section p {
-    color: #e2e8f0 !important;
-    line-height: 1.8;
-}
-
-
-/* =========================================================
-   PERSONAL INFORMATION
-   ========================================================= */
-
-.about-mf .about-info {
-    color: #f1f5f9 !important;
-}
-
-.about-mf .about-info li {
-    color: #e5e7eb !important;
-    margin-bottom: 8px;
-}
-
-.about-mf .about-info li span:first-child {
-    color: #22d3ee !important;
-    font-weight: 700;
-}
-
-.about-mf .about-info li span:last-child {
-    color: #f8fafc !important;
-}
-
-
-/* If your template uses p instead of li */
-.about-mf .about-info p {
-    color: #e5e7eb !important;
-}
-
-.about-mf .about-info .title-s {
-    color: #22d3ee !important;
-    font-weight: 700;
-}
-
-.about-mf .about-info p span:not(.title-s) {
-    color: #f8fafc !important;
-}
-
-
-/* =========================================================
-   TYPING ANIMATION
-   ========================================================= */
-
-#typing-animation {
-    position: relative;
-
-    font-size: 30px;
-    font-weight: 700;
-
-    color: #67e8f9 !important;
-
-    overflow: hidden;
-    white-space: nowrap;
-
-    text-shadow:
-        0 0 10px rgba(34, 211, 238, 0.35);
-
-    animation: typing 3s steps(20, end) infinite;
-}
-
-#typing-animation:before {
-    content: "";
-    position: absolute;
-
-    top: 0;
-    left: 0;
-
-    width: 0;
-    height: 100%;
-
-    background-color: #0b1220;
-
-    animation: typing-cursor 0.5s ease-in-out infinite;
-}
-
-@keyframes typing {
-    from {
-        width: 0;
-    }
-
-    to {
-        width: 100%;
-    }
-}
-
-@keyframes typing-cursor {
-    from {
-        width: 5px;
-    }
-
-    to {
-        width: 0;
-    }
-}
-
-
-/* =========================================================
-   SKILLS SECTION
-   ========================================================= */
-
-.about-mf .skill-mf {
-    margin-top: 20px;
-}
-
-.about-mf .skill-mf .title-s {
-    color: #22d3ee !important;
-    font-size: 16px;
-    font-weight: 700;
-}
-
-
-/* Skill name */
-.about-mf .skill-mf > span {
-    display: inline-block;
-
-    color: #f8fafc !important;
-
-    font-size: 14px;
-    font-weight: 600;
-
-    margin-bottom: 2px;
-}
-
-
-/* Percentage */
-.about-mf .skill-mf .pull-right {
-    color: #67e8f9 !important;
-
-    font-size: 14px;
-    font-weight: 700;
-}
-
-
-/* =========================================================
-   PROGRESS BAR - MAIN FIX
-   ========================================================= */
-
-.about-mf .skill-mf .progress {
-    display: block !important;
-
-    position: relative !important;
-
-    width: 100% !important;
-    height: 12px !important;
-
-    margin-top: 7px !important;
-    margin-bottom: 18px !important;
-
-    padding: 0 !important;
-
-    background-color: #334155 !important;
-    background: #334155 !important;
-
-    border: 1px solid rgba(255, 255, 255, 0.12) !important;
-
-    border-radius: 50px !important;
-
-    overflow: hidden !important;
-
-    opacity: 1 !important;
-    visibility: visible !important;
-}
-
-
-/* Filled part */
-.about-mf .skill-mf .progress .progress-bar {
-    display: block !important;
-
-    position: relative !important;
-
-    width: auto;
-
-    height: 100% !important;
-    min-height: 12px !important;
-
-    margin: 0 !important;
-    padding: 0 !important;
-
-    background-color: #00d9ff !important;
-
-    background-image: linear-gradient(
-        90deg,
-        #00d9ff 0%,
-        #6366f1 50%,
-        #a855f7 100%
-    ) !important;
-
-    border-radius: 50px !important;
-
-    opacity: 1 !important;
-    visibility: visible !important;
-
-    box-shadow:
-        0 0 8px rgba(0, 217, 255, 0.55),
-        0 0 15px rgba(99, 102, 241, 0.25);
-
-    transition:
-        width 1s ease,
-        transform 0.3s ease;
-}
-
-
-/* Hover effect */
-.about-mf .skill-mf .progress:hover .progress-bar {
-    filter: brightness(1.2);
-
-    box-shadow:
-        0 0 12px rgba(0, 217, 255, 0.7),
-        0 0 20px rgba(168, 85, 247, 0.4);
-}
-
-
-/* =========================================================
-   INDIVIDUAL SKILL COLORS
-   ========================================================= */
-
-.about-mf .skill-mf .progress:nth-of-type(1) .progress-bar {
-    background: linear-gradient(
-        90deg,
-        #00d9ff,
-        #2563eb
-    ) !important;
-}
-
-.about-mf .skill-mf .progress:nth-of-type(2) .progress-bar {
-    background: linear-gradient(
-        90deg,
-        #06b6d4,
-        #6366f1
-    ) !important;
-}
-
-.about-mf .skill-mf .progress:nth-of-type(3) .progress-bar {
-    background: linear-gradient(
-        90deg,
-        #6366f1,
-        #8b5cf6
-    ) !important;
-}
-
-.about-mf .skill-mf .progress:nth-of-type(4) .progress-bar {
-    background: linear-gradient(
-        90deg,
-        #8b5cf6,
-        #a855f7
-    ) !important;
-}
-
-.about-mf .skill-mf .progress:nth-of-type(5) .progress-bar {
-    background: linear-gradient(
-        90deg,
-        #06b6d4,
-        #14b8a6
-    ) !important;
-}
-
-
-/* =========================================================
-   ZOOM EFFECT
-   ========================================================= */
-
-.zoom-effect {
-    overflow: hidden;
-    transition: transform 0.3s ease-out;
-}
-
-.zoom-effect:hover {
-    transform: scale(1.05);
-}
-
-
-/* =========================================================
-   MOBILE RESPONSIVE
-   ========================================================= */
-
-@media (max-width: 768px) {
-
-    .about-mf .box-shadow-full {
-        padding: 2rem 1.5rem;
-
-        background: linear-gradient(
-            145deg,
-            #0b1220,
-            #17243f,
-            #28183f
-        );
-
-        border-radius: 18px;
-    }
-
-    .about-mf .about-img img {
-        margin-left: 0;
-    }
-
-    .about-mf p {
-        color: #e5e7eb !important;
-        font-size: 14px;
-    }
-
-    .about-mf .skill-mf .progress {
-        height: 11px !important;
-    }
-
-    .about-mf .skill-mf .progress .progress-bar {
-        height: 100% !important;
-        min-height: 11px !important;
-    }
-
-    #typing-animation {
-        font-size: 23px;
-    }
-}
-
-
-@media (max-width: 480px) {
-
-    .about-mf .box-shadow-full {
-        padding: 1.5rem 1rem;
-    }
-
-    .about-mf .skill-mf > span,
-    .about-mf .skill-mf .pull-right {
-        font-size: 13px;
-    }
-
-    .about-mf .skill-mf .progress {
-        height: 10px !important;
-        min-height: 10px !important;
-    }
-
-    .about-mf .skill-mf .progress .progress-bar {
-        min-height: 10px !important;
-    }
-}
-/* =====================================================
-   EDUCATION JOURNEY
-   ===================================================== */
-
-.education-timeline {
-    position: relative;
-
-    max-width: 950px;
-
-    margin: 0 auto;
-
-    padding: 10px 0 20px;
-}
-
-
-/* Vertical timeline line */
-
-.education-timeline::before {
-    content: "";
-
-    position: absolute;
-
-    top: 0;
-    bottom: 0;
-
-    left: 24px;
-
-    width: 2px;
-
-    background: linear-gradient(
-        to bottom,
-        #ffbd39,
-        rgba(255, 189, 57, 0.15)
-    );
-}
-
-
-/* Individual education item */
-
-.education-item {
-    position: relative;
-
-    display: flex;
-
-    align-items: flex-start;
-
-    margin-bottom: 35px;
-
-    padding-left: 70px;
-}
-
-
-/* Timeline dot */
-
-.education-dot {
-    position: absolute;
-
-    left: 14px;
-
-    top: 28px;
-
-    width: 22px;
-    height: 22px;
-
-    border-radius: 50%;
-
-    background: #ffbd39;
-
-    border: 5px solid #111111;
-
-    box-shadow:
-        0 0 0 2px #ffbd39,
-        0 0 15px rgba(255, 189, 57, 0.45);
-
-    z-index: 2;
-}
-
-
-/* Education card */
-
-.education-card {
-    width: 100%;
-
-    padding: 28px 30px;
-
-    border-radius: 14px;
-
-    background: rgba(255, 255, 255, 0.04);
-
-    border: 1px solid rgba(255, 255, 255, 0.10);
-
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-
-    box-shadow:
-        0 12px 35px rgba(0, 0, 0, 0.15);
-
-    transition:
-        transform 0.3s ease,
-        border-color 0.3s ease,
-        box-shadow 0.3s ease;
-}
-
-
-/* Hover */
-
-.education-card:hover {
+.contact-info-card:hover,
+.contact-form-card:hover {
     transform: translateY(-5px);
 
-    border-color: rgba(255, 189, 57, 0.45);
+    border-color: rgba(0, 217, 255, 0.35);
 
     box-shadow:
-        0 18px 45px rgba(0, 0, 0, 0.25),
-        0 0 20px rgba(255, 189, 57, 0.08);
-}
-
-
-/* Date */
-
-.education-date {
-    display: inline-block;
-
-    margin-bottom: 10px;
-
-    padding: 5px 12px;
-
-    border-radius: 20px;
-
-    background: rgba(255, 189, 57, 0.10);
-
-    border: 1px solid rgba(255, 189, 57, 0.25);
-
-    color: #ffbd39;
-
-    font-size: 12px;
-
-    font-weight: 700;
-
-    letter-spacing: 1px;
-}
-
-
-/* Degree */
-
-.education-card h2 {
-    margin: 5px 0 7px;
-
-    color: inherit;
-
-    font-size: 23px;
-
-    font-weight: 700;
-}
-
-
-/* Branch */
-
-.education-card h3 {
-    margin: 0 0 8px;
-
-    color: #ffbd39;
-
-    font-size: 16px;
-
-    font-weight: 600;
-}
-
-
-/* Institute */
-
-.education-institute {
-    display: block;
-
-    margin-bottom: 15px;
-
-    color: inherit;
-
-    font-size: 14px;
-
-    opacity: 0.75;
-
-    line-height: 1.6;
-}
-
-
-/* Details */
-
-.education-details {
-    margin-top: 12px;
-
-    padding-top: 12px;
-
-    border-top: 1px solid rgba(255, 255, 255, 0.08);
-}
-
-
-.education-details p {
-    margin: 6px 0;
-
-    color: inherit;
-
-    font-size: 14px;
-
-    line-height: 1.6;
-}
-
-
-.education-details strong {
-    color: inherit;
-
-    font-weight: 600;
-}
-/* ================= EDUCATION CARD ================= */
-
-.education-card {
-    width: 100%;
-    padding: 30px;
-
-    /* BOX BACKGROUND */
-    background: #101a2e;
-
-    /* BORDER */
-    border: 1px solid #263a5a;
-    border-radius: 16px;
-
-    box-shadow:
-        0 12px 35px rgba(0, 0, 0, 0.35);
-
-    transition: all 0.3s ease;
-}
-
-/* Hover */
-.education-card:hover {
-    transform: translateY(-6px);
-
-    background: #14213a;
-
-    border-color: #00d9ff;
-
-    box-shadow:
-        0 18px 45px rgba(0, 0, 0, 0.45),
-        0 0 25px rgba(0, 217, 255, 0.12);
-}
-
-
-/* ================= DATE ================= */
-
-.education-date {
-    display: inline-block;
-
-    padding: 6px 13px;
-    margin-bottom: 12px;
-
-    background: #00d9ff;
-    color: #07111f;
-
-    border-radius: 20px;
-
-    font-size: 12px;
-    font-weight: 800;
-
-    letter-spacing: 1px;
-}
-
-
-/* ================= DEGREE ================= */
-
-.education-card h2 {
-    margin: 5px 0 8px;
-
-    color: #ffffff !important;
-
-    font-size: 23px;
-    font-weight: 700;
-
-    line-height: 1.35;
-}
-
-
-/* ================= BRANCH ================= */
-
-.education-card h3 {
-    margin: 0 0 10px;
-
-    color: #00d9ff !important;
-
-    font-size: 16px;
-    font-weight: 600;
-
-    line-height: 1.5;
-}
-
-
-/* ================= COLLEGE NAME ================= */
-
-.education-institute {
-    display: block;
-
-    margin-bottom: 17px;
-
-    color: #e5e7eb !important;
-
-    opacity: 1 !important;
-
-    font-size: 14px;
-    font-weight: 500;
-
-    line-height: 1.6;
-}
-
-
-/* ================= DETAILS ================= */
-
-.education-details {
-    margin-top: 14px;
-    padding-top: 14px;
-
-    border-top: 1px solid #304565;
-}
-
-
-.education-details p {
-    margin: 7px 0;
-
-    color: #dbeafe !important;
-
-    font-size: 14px;
-    font-weight: 500;
-
-    line-height: 1.6;
-}
-
-
-/* IMPORTANT: Labels */
-
-.education-details strong {
-    color: #ffffff !important;
-
-    font-weight: 700;
-}
-
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 768px) {
-
-    .education-card {
-        padding: 23px 20px;
-    }
-
-    .education-card h2 {
-        font-size: 20px;
-    }
-
-    .education-card h3 {
-        font-size: 15px;
-    }
-
-    .education-institute,
-    .education-details p {
-        font-size: 13px;
-    }
-}
-
-
-/* ================= SMALL MOBILE ================= */
-
-@media (max-width: 480px) {
-
-    .education-card {
-        padding: 20px 17px;
-    }
-
-    .education-card h2 {
-        font-size: 18px;
-    }
-
-    .education-card h3 {
-        font-size: 14px;
-    }
-
-    .education-date {
-        font-size: 11px;
-    }
-}
-
-
-/* =====================================================
-   EDUCATION MOBILE
-   ===================================================== */
-
-@media (max-width: 768px) {
-
-    .education-timeline {
-        padding-bottom: 10px;
-    }
-
-    .education-timeline::before {
-        left: 17px;
-    }
-
-    .education-item {
-        padding-left: 48px;
-
-        margin-bottom: 25px;
-    }
-
-    .education-dot {
-        left: 7px;
-
-        width: 20px;
-        height: 20px;
-
-        border-width: 4px;
-    }
-
-    .education-card {
-        padding: 22px 20px;
-    }
-
-    .education-card h2 {
-        font-size: 20px;
-    }
-
-    .education-card h3 {
-        font-size: 15px;
-    }
-
-    .education-institute,
-    .education-details p {
-        font-size: 13px;
-    }
-
-}
-
-
-/* =====================================================
-   SMALL MOBILE
-   ===================================================== */
-
-@media (max-width: 480px) {
-
-    .education-item {
-        padding-left: 42px;
-    }
-
-    .education-timeline::before {
-        left: 15px;
-    }
-
-    .education-dot {
-        left: 5px;
-
-        width: 19px;
-        height: 19px;
-    }
-
-    .education-card {
-        padding: 20px 17px;
-    }
-
-    .education-card h2 {
-        font-size: 18px;
-    }
-
-}
-
-/* ===============================
-   VIEW PROJECT BUTTON
-   =============================== */
-
-.project-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-
-    padding: 11px 20px;
-    min-width: 145px;
-
-    background: #111827 !important;
-    color: #ffffff !important;
-
-    border: 1px solid #111827 !important;
-    border-radius: 10px;
-
-    font-size: 14px;
-    font-weight: 600;
-
-    text-decoration: none !important;
-
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
-
-    transition: all 0.3s ease;
-}
-
-/* Text + icon */
-.project-btn,
-.project-btn i {
-    color: #ffffff !important;
-}
-
-/* Hover */
-.project-btn:hover {
-    background: #000000 !important;
-    color: #ffffff !important;
-
-    border-color: #00d9ff !important;
-
-    transform: translateY(-2px);
-
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.30),
-        0 0 15px rgba(0, 217, 255, 0.20);
-}
-
-/* Arrow animation */
-.project-btn i {
-    transition: transform 0.3s ease;
-}
-
-.project-btn:hover i {
-    transform: translate(3px, -3px);
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-    .project-btn {
-        width: 100%;
-        min-width: 0;
-    }
-}
-
-
-/* =========================================
-   RESUME BUTTONS
-   ========================================= */
-
-.resume-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 15px;
-    flex-wrap: wrap;
-}
-
-.resume-btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 9px;
-
-    min-width: 160px;
-    padding: 12px 22px;
-
-    border-radius: 8px;
-
-    font-size: 14px;
-    font-weight: 600;
-
-    text-decoration: none !important;
-
-    transition: all 0.3s ease;
-}
-
-/* View Resume */
-.resume-view-btn {
-    background: #111827;
-    color: #ffffff !important;
-    border: 1px solid #111827;
-}
-
-.resume-view-btn:hover {
-    background: #000000;
-    color: #ffffff !important;
-    border-color: #00d9ff;
-
-    transform: translateY(-2px);
-
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
-}
-
-/* Download Resume */
-.resume-download-btn {
-    background: #ffbd39;
-    color: #111111 !important;
-    border: 1px solid #ffbd39;
-}
-
-.resume-download-btn:hover {
-    background: #e5a82f;
-    color: #111111 !important;
-
-    transform: translateY(-2px);
-
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.20);
-}
-
-/* Icons */
-.resume-btn span {
-    font-size: 16px;
-}
-
-/* Mobile */
-@media (max-width: 480px) {
-
-    .resume-buttons {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .resume-btn {
-        width: 100%;
-        max-width: 260px;
-    }
-
-}
-
-
-	  /* ================= PROJECT SLIDER ================= */
-
-.project-section {
-    overflow: hidden;
-}
-
-.project-slider {
-    width: 100%;
-    overflow: hidden;
-    padding: 20px 0 50px;
-}
-
-.project-track {
-    display: flex;
-    width: max-content;
-    gap: 30px;
-
-    /* LEFT TO RIGHT */
-    animation: projectScroll 45s linear infinite;
-}
-
-/* Pause when mouse is over projects */
-.project-slider:hover .project-track {
-    animation-play-state: paused;
-}
-
-
-/* ================= PROJECT CARD ================= */
-
-.project-card-link {
-    display: block;
-    width: 370px;
-    min-width: 370px;
-
-    text-decoration: none !important;
-    color: inherit !important;
-}
-
-.project-card {
-    width: 100%;
-
-    border-radius: 20px;
-    overflow: hidden;
-
-    background: rgba(255, 255, 255, 0.05);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.18);
-
-    transition: all 0.4s ease;
-
-    /* FLOATING ANIMATION */
-    animation: projectFloat 4s ease-in-out infinite;
-}
-
-
-/* Different floating timing */
-
-.project-card-link:nth-child(2) .project-card {
-    animation-delay: 0.4s;
-}
-
-.project-card-link:nth-child(3) .project-card {
-    animation-delay: 0.8s;
-}
-
-.project-card-link:nth-child(4) .project-card {
-    animation-delay: 1.2s;
-}
-
-.project-card-link:nth-child(5) .project-card {
-    animation-delay: 1.6s;
-}
-
-.project-card-link:nth-child(6) .project-card {
-    animation-delay: 2s;
-}
-
-
-/* ================= FLOATING ================= */
-
-@keyframes projectFloat {
-
-    0%,
-    100% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(-10px);
-    }
-
-}
-
-
-/* ================= SCROLL ================= */
-
-@keyframes projectScroll {
-
-    0% {
-        transform: translateX(-50%);
-    }
-
-    100% {
-        transform: translateX(0);
-    }
-
-}
-
-
-/* ================= HOVER ================= */
-
-.project-card-link:hover .project-card {
-    transform: translateY(-15px) scale(1.02);
-
-    box-shadow:
-        0 25px 60px rgba(0, 0, 0, 0.30);
-}
-
-
-/* ================= IMAGE ================= */
-
-.project-image {
-    position: relative;
-
-    width: 100%;
-    height: 220px;
-
-    overflow: hidden;
-}
-
-.project-image img {
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    display: block;
-
-    transition: transform 0.6s ease;
-}
-
-.project-card-link:hover img {
-    transform: scale(1.08);
-}
-
-
-/* ================= IMAGE OPEN ICON ================= */
-
-.image-overlay {
-    position: absolute;
-
-    top: 15px;
-    right: 15px;
-
-    width: 45px;
-    height: 45px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    border-radius: 50%;
-
-    background: rgba(0, 0, 0, 0.65);
-
-    color: white;
-
-    font-size: 19px;
-
-    opacity: 0;
-
-    transform: scale(0.7);
-
-    transition: all 0.3s ease;
-}
-
-.project-card-link:hover .image-overlay {
-    opacity: 1;
-    transform: scale(1);
-}
-
-
-/* ================= CONTENT ================= */
-
-.project-content {
-    padding: 25px;
-}
-
-.project-number {
-    display: block;
-
-    font-size: 13px;
-    font-weight: 700;
-
-    letter-spacing: 2px;
-
-    opacity: 0.5;
-}
-
-.project-content h3 {
-    margin-top: 8px;
-    margin-bottom: 12px;
-
-    font-size: 24px;
-    font-weight: 700;
-}
-
-.project-content p {
-    font-size: 14px;
-
-    line-height: 1.7;
-
-    min-height: 70px;
-
-    opacity: 0.75;
-}
-
-
-/* ================= TECHNOLOGIES ================= */
-
-.project-tech {
-    display: flex;
-
-    flex-wrap: wrap;
-
-    gap: 7px;
-
-    margin-top: 18px;
-}
-
-.project-tech span {
-    padding: 5px 10px;
-
-    border-radius: 20px;
-
-    background: rgba(255, 255, 255, 0.08);
-
-    border: 1px solid rgba(255, 255, 255, 0.10);
-
-    font-size: 11px;
-}
-
-
-/* ================= OPEN PROJECT ================= */
-
-.project-open {
-    margin-top: 20px;
-
-    font-size: 14px;
-
-    font-weight: 600;
-
-    display: flex;
-
-    align-items: center;
-}
-
-.project-open i {
-    margin-left: 7px;
-
-    transition: transform 0.3s ease;
-}
-
-.project-card-link:hover .project-open i {
-    transform: translate(5px, -5px);
-}
-
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 768px) {
-
-    .project-card-link {
-        width: 310px;
-        min-width: 310px;
-    }
-
-    .project-image {
-        height: 190px;
-    }
-
-    .project-content {
-        padding: 20px;
-    }
-
-    .project-content h3 {
-        font-size: 21px;
-    }
-
-}
-
-
-/* SMALL MOBILE */
-
-@media (max-width: 480px) {
-
-    .project-card-link {
-        width: 285px;
-        min-width: 285px;
-    }
-
-}
-
-
-/* ================= REDUCE MOTION ================= */
-
-@media (prefers-reduced-motion: reduce) {
-
-    .project-track,
-    .project-card {
-        animation: none;
-    }
-
-}
-
-
-/* =========================================================
-   PROJECTS SECTION
-   ========================================================= */
-
-.projects-section {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding: 100px 0;
-}
-
-/* Heading */
-
-.projects-section .section-heading {
-    margin-bottom: 55px;
-    padding: 0 20px;
-}
-
-.projects-section .section-subtitle {
-    display: inline-block;
-    margin-bottom: 12px;
-    font-size: 13px;
-    font-weight: 700;
-    letter-spacing: 3px;
-    text-transform: uppercase;
-    color: #00d9ff;
-}
-
-.projects-section .section-heading h2 {
-    margin: 0;
-    font-size: clamp(32px, 5vw, 52px);
-    font-weight: 800;
-}
-
-.projects-section .section-heading h2 span {
-    background: linear-gradient(90deg, #00d9ff, #8b5cf6);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-}
-
-.projects-section .section-heading p {
-    margin: 15px auto 0;
-    max-width: 650px;
-    opacity: 0.7;
-}
-
-
-/* =========================================================
-   MARQUEE
-   ========================================================= */
-
-.projects-marquee {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    padding: 25px 0 45px;
-    cursor: grab;
-    touch-action: pan-y;
-}
-
-.projects-marquee:active {
-    cursor: grabbing;
-}
-
-.projects-track {
-    display: flex;
-    align-items: stretch;
-    gap: 28px;
-    width: max-content;
-    padding-left: 30px;
-
-    animation: projectsLeftToRight 65s linear infinite;
-
-    will-change: transform;
-}
-
-.projects-marquee:hover .projects-track {
-    animation-play-state: paused;
-}
-
-
-/*
-   The track contains two identical sets of cards.
-
-   Moving from -50% to 0% creates a seamless
-   rightward infinite marquee.
-*/
-
-@keyframes projectsLeftToRight {
-    from {
-        transform: translateX(-50%);
-    }
-
-    to {
-        transform: translateX(0);
-    }
-}
-
-
-/* =========================================================
-   PROJECT CARD
-   ========================================================= */
-
-.project-card {
-    position: relative;
-    flex: 0 0 370px;
-    width: 370px;
-
-    overflow: hidden;
-
-    border: 1px solid rgba(255, 255, 255, 0.09);
-    border-radius: 24px;
-
-    background:
-        linear-gradient(
-            145deg,
-            rgba(255, 255, 255, 0.08),
-            rgba(255, 255, 255, 0.025)
-        );
-
-    backdrop-filter: blur(18px);
-    -webkit-backdrop-filter: blur(18px);
-
-    box-shadow:
-        0 20px 60px rgba(0, 0, 0, 0.35),
-        inset 0 1px 0 rgba(255, 255, 255, 0.06);
-
-    transition:
-        transform 0.4s ease,
-        border-color 0.4s ease,
-        box-shadow 0.4s ease;
-}
-
-.project-card:hover {
-    transform: translateY(-12px);
-
-    border-color: rgba(0, 217, 255, 0.45);
-
-    box-shadow:
-        0 25px 70px rgba(0, 0, 0, 0.5),
+        0 25px 60px rgba(0, 0, 0, 0.40),
         0 0 35px rgba(0, 217, 255, 0.08);
 }
 
-
-/* =========================================================
-   PROJECT IMAGE
-   ========================================================= */
-
-.project-image {
-    position: relative;
-    width: 100%;
-    height: 220px;
-    overflow: hidden;
-    background: #080d18;
+.contact-info-card h3,
+.contact-form-card h3 {
+    color: #ffffff !important;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 18px;
 }
 
-.project-image::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-
-    background:
-        linear-gradient(
-            to bottom,
-            transparent 55%,
-            rgba(4, 8, 20, 0.35)
-        );
-
-    pointer-events: none;
+.contact-info-card > p {
+    color: #dbe4f0 !important;
+    line-height: 1.8;
+    margin-bottom: 28px;
 }
 
-.project-image img {
+/* Contact Items */
+.contact-info-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    margin-bottom: 22px;
+}
+
+.contact-icon {
+    min-width: 46px;
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        #06b6d4,
+        #6366f1
+    );
+
+    color: #ffffff;
+    font-size: 19px;
+
+    box-shadow: 0 8px 20px rgba(6, 182, 212, 0.18);
+}
+
+.contact-label {
     display: block;
-
-    width: 100%;
-    height: 100%;
-
-    object-fit: cover;
-
-    transition:
-        transform 0.7s cubic-bezier(0.2, 0.7, 0.2, 1),
-        filter 0.4s ease;
+    color: #22d3ee !important;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.7px;
 }
 
-.project-card:hover .project-image img {
-    transform: scale(1.06);
+.contact-info-item p {
+    margin: 0;
+    color: #f1f5f9 !important;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.contact-info-item a {
+    color: #f1f5f9 !important;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.contact-info-item a:hover {
+    color: #22d3ee !important;
+}
+
+/* Social Links */
+.contact-socials {
+    display: flex;
+    gap: 12px;
+    margin-top: 28px;
+    padding-top: 22px;
+    border-top: 1px solid rgba(255,255,255,0.10);
+}
+
+.contact-socials a {
+    padding: 9px 16px;
+    border-radius: 8px;
+
+    color: #ffffff !important;
+    background: rgba(255,255,255,0.07);
+
+    border: 1px solid rgba(255,255,255,0.12);
+
+    text-decoration: none !important;
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.contact-socials a:hover {
+    background: #06b6d4;
+    border-color: #06b6d4;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+}
+
+
+/* Contact Form */
+.contact-form-card label {
+    display: block;
+    color: #e2e8f0 !important;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 7px;
+}
+
+.contact-form-card .form-group {
+    margin-bottom: 20px;
+}
+
+.contact-form-card .form-control {
+    width: 100%;
+
+    min-height: 48px;
+
+    padding: 12px 15px;
+
+    color: #ffffff !important;
+
+    background: rgba(255,255,255,0.06) !important;
+
+    border: 1px solid rgba(255,255,255,0.14) !important;
+
+    border-radius: 10px;
+
+    outline: none;
+
+    box-shadow: none !important;
+
+    transition: all 0.3s ease;
+}
+
+.contact-form-card textarea.form-control {
+    min-height: 145px;
+    resize: vertical;
+}
+
+.contact-form-card .form-control::placeholder {
+    color: #94a3b8 !important;
+}
+
+.contact-form-card .form-control:focus {
+    background: rgba(255,255,255,0.08) !important;
+
+    border-color: #22d3ee !important;
+
+    box-shadow:
+        0 0 0 3px rgba(34,211,238,0.10),
+        0 0 20px rgba(34,211,238,0.08) !important;
+}
+
+
+/* Send Button */
+.contact-submit-btn {
+    width: 100%;
+
+    min-height: 50px;
+
+    border: none;
+    border-radius: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #06b6d4,
+        #6366f1
+    );
+
+    color: #ffffff;
+
+    font-size: 15px;
+    font-weight: 700;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+    box-shadow: 0 10px 25px rgba(6,182,212,0.18);
+}
+
+.contact-submit-btn:hover {
+    transform: translateY(-3px);
+
+    box-shadow:
+        0 15px 30px rgba(6,182,212,0.25),
+        0 0 25px rgba(99,102,241,0.15);
+}
+
+.contact-submit-btn span {
+    margin-right: 8px;
 }
 
 
 /* =====================================================
-   PROJECT CONTENT VISIBILITY FIX
+   PROFESSIONAL FOOTER
    ===================================================== */
 
-/* Project card background */
-.project-card {
-    background: #ffffff !important;
-    border: 1px solid rgba(0, 0, 0, 0.10);
+.site-footer {
+    position: relative;
+
+    padding: 55px 0 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #080d18 0%,
+            #101827 50%,
+            #171126 100%
+        );
+
+    border-top: 1px solid rgba(255,255,255,0.08);
 }
 
-/* Project content */
-.project-content {
-    background: #ffffff;
-    color: #111111 !important;
+.footer-main {
+    text-align: center;
 }
 
-/* Project number */
-.project-number {
-    color: #555555 !important;
-    opacity: 1 !important;
-}
-
-/* Project title */
-.project-content h3 {
-    color: #111111 !important;
-    opacity: 1 !important;
-    font-weight: 700;
-}
-
-/* Project description */
-.project-content p {
-    color: #444444 !important;
-    opacity: 1 !important;
-}
-
-/* Technology tags */
-.project-tags span {
-    color: #222222 !important;
-    background: rgba(0, 217, 255, 0.08) !important;
-    border: 1px solid rgba(0, 180, 220, 0.25) !important;
-}
-
-/* View Project button */
-.project-btn {
-    color: #111111 !important;
-    background: linear-gradient(
-        135deg,
-        rgba(0, 217, 255, 0.12),
-        rgba(139, 92, 246, 0.12)
-    ) !important;
-    border: 1px solid rgba(0, 180, 220, 0.35) !important;
-}
-
-/* Button hover */
-.project-btn:hover {
-    color: #000000 !important;
-    background: linear-gradient(
-        135deg,
-        rgba(0, 217, 255, 0.25),
-        rgba(139, 92, 246, 0.25)
-    ) !important;
-}
-
-/* Arrow icon */
-.project-btn i {
-    color: #111111 !important;
-}
-
-
-/* =========================================================
-   TAGS
-   ========================================================= */
-
-.project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
-
-    margin-bottom: 22px;
-}
-
-.project-tags span {
+.footer-logo {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
 
-    padding: 6px 10px;
+    width: 58px;
+    height: 58px;
 
-    border: 1px solid rgba(0, 217, 255, 0.15);
-    border-radius: 50px;
+    margin-bottom: 15px;
 
-    background: rgba(0, 217, 255, 0.06);
+    border-radius: 15px;
 
-    color: rgba(255, 255, 255, 0.75);
+    background: linear-gradient(
+        135deg,
+        #06b6d4,
+        #6366f1,
+        #a855f7
+    );
 
-    font-size: 11px;
+    color: #ffffff !important;
+
+    font-size: 22px;
+    font-weight: 800;
+
+    text-decoration: none !important;
+
+    box-shadow:
+        0 10px 25px rgba(6,182,212,0.15);
+}
+
+.footer-main h3 {
+    color: #ffffff !important;
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.footer-main p {
+    max-width: 600px;
+    margin: 0 auto 22px;
+
+    color: #aebbd0 !important;
+
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+/* Footer Navigation */
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px;
+
+    margin-bottom: 25px;
+}
+
+.footer-nav a {
+    color: #cbd5e1 !important;
+
+    text-decoration: none !important;
+
+    font-size: 13px;
+    font-weight: 600;
+
+    transition: 0.3s ease;
+}
+
+.footer-nav a:hover {
+    color: #22d3ee !important;
+}
+
+/* Footer Social */
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+
+    margin-bottom: 30px;
+}
+
+.footer-socials a {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: rgba(255,255,255,0.06);
+
+    border: 1px solid rgba(255,255,255,0.10);
+
+    color: #ffffff !important;
+
+    text-decoration: none !important;
+
+    font-size: 14px;
+
+    transition: 0.3s ease;
+}
+
+.footer-socials a:hover {
+    background: #06b6d4;
+    border-color: #06b6d4;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(6,182,212,0.18);
+}
+
+/* Footer Bottom */
+.footer-bottom {
+    padding-top: 22px;
+
+    border-top: 1px solid rgba(255,255,255,0.08);
+
+    text-align: center;
+}
+
+.footer-bottom p {
+    margin: 0;
+
+    color: #94a3b8 !important;
+
+    font-size: 12px;
+}
+
+.footer-bottom span {
+    color: #22d3ee !important;
     font-weight: 600;
 }
 
 
-/* =====================================================
-   VIEW PROJECT BUTTON - DARK STYLE
-   ===================================================== */
-
-.project-btn {
-    background: #111827 !important;
-    color: #ffffff !important;
-
-    border: 1px solid #263244 !important;
-
-    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.20);
-
-    font-weight: 700 !important;
-}
-
-/* Button text */
-.project-btn,
-.project-btn span,
-.project-btn i {
-    color: #ffffff !important;
-}
-
-/* Hover */
-.project-btn:hover {
-    background: #000000 !important;
-    color: #ffffff !important;
-
-    border-color: #00d9ff !important;
-
-    box-shadow:
-        0 8px 25px rgba(0, 0, 0, 0.30),
-        0 0 15px rgba(0, 217, 255, 0.15);
-}
-
-/* Arrow */
-.project-btn:hover i {
-    color: #ffffff !important;
-}
-
-
-/* =========================================================
-   MOBILE
-   ========================================================= */
-
+/* Mobile */
 @media (max-width: 768px) {
 
-    .projects-section {
-        padding: 75px 0;
+    .contact-info-card,
+    .contact-form-card {
+        padding: 25px 20px;
     }
 
-    .projects-section .section-heading {
-        margin-bottom: 35px;
+    .contact-info-card {
+        margin-bottom: 25px;
     }
 
-    .projects-marquee {
-        padding-bottom: 30px;
+    .footer-nav {
+        gap: 15px;
     }
 
-    .projects-track {
-        gap: 18px;
-        padding-left: 18px;
-
-        animation-duration: 50s;
-    }
-
-    .project-card {
-        flex-basis: 82vw;
-        width: 82vw;
-        max-width: 360px;
-    }
-
-    .project-image {
-        height: 205px;
-    }
-
-    .project-content {
-        padding: 23px 20px;
-    }
-
-    .project-content h3 {
-        font-size: 19px;
-    }
-
-    .project-content p {
-        font-size: 13px;
+    .site-footer {
+        padding: 45px 0 20px;
     }
 }
+    </style>
+</head>
 
 
-/* =========================================================
-   SMALL MOBILE
-   ========================================================= */
+<body>
 
-@media (max-width: 420px) {
+    <!-- =====================================================
+         NAVBAR
+    ===================================================== -->
 
-    .project-card {
-        flex-basis: 86vw;
-        width: 86vw;
-    }
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
 
-    .project-image {
-        height: 190px;
-    }
-}
+            <a class="navbar-brand" href="#home-section">
+                Rohan Bodkhe <span>.</span>
+            </a>
 
+            <button class="navbar-toggler"
+                type="button"
+                data-toggle="collapse"
+                data-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-/* =========================================================
-   ACCESSIBILITY
-   ========================================================= */
+            <div class="collapse navbar-collapse" id="navbarNav">
 
-@media (prefers-reduced-motion: reduce) {
+                <ul class="navbar-nav ml-auto">
 
-    .projects-track {
-        animation: none;
-    }
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home-section">Home</a>
+                    </li>
 
-    .project-card,
-    .project-image img,
-    .project-btn {
-        transition: none;
-    }
-}
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about-section">About</a>
+                    </li>
 
-/* =========================================================
-   PROJECTS - INFINITE LEFT TO RIGHT MARQUEE
-   ========================================================= */
+                    <li class="nav-item">
+                        <a class="nav-link" href="#resume-section">Resume</a>
+                    </li>
 
-(function () {
-    const track = document.getElementById("projectsTrack");
+                    <!-- CORRECTED PROJECT ID -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#projects">Projects</a>
+                    </li>
 
-    if (!track) return;
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact-section">Contact</a>
+                    </li>
 
-    /*
-     * Clone the original 8 cards.
-     * The CSS animation moves the complete track from
-     * -50% to 0%, creating the infinite effect.
-     */
+                </ul>
 
-    const originalCards = Array.from(track.children);
-
-    originalCards.forEach((card) => {
-        const clone = card.cloneNode(true);
-
-        clone.setAttribute("aria-hidden", "true");
-
-        /*
-         * Prevent duplicated links from being keyboard-focusable.
-         */
-        clone.querySelectorAll("a").forEach((link) => {
-            link.setAttribute("tabindex", "-1");
-        });
-
-        track.appendChild(clone);
-    });
+            </div>
+        </div>
+    </nav>
 
 
-    /* =====================================================
-       TOUCH / DRAG SUPPORT
-       ===================================================== */
+    <!-- =====================================================
+         HERO
+    ===================================================== -->
 
-    const marquee = track.parentElement;
+    <section id="home-section">
 
-    let isDragging = false;
-    let startX = 0;
-    let currentX = 0;
-    let previousTransform = 0;
+        <div class="container">
 
-    marquee.addEventListener("pointerdown", function (event) {
+            <div class="row align-items-center">
 
-        isDragging = true;
+                <div class="col-lg-8 hero-content">
 
-        startX = event.clientX;
+                    <div class="hero-small">
+                        HELLO, I'M
+                    </div>
 
-        track.style.animationPlayState = "paused";
+                    <h1 class="hero-title">
+                        Rohan Santosh <span>Bodkhe</span>
+                    </h1>
 
-        marquee.setPointerCapture(event.pointerId);
+                    <div class="hero-subtitle">
+                        I'm a
+                        <span id="typing-animation">
+                            Engineering Student
+                        </span>
+                    </div>
 
-    });
+                    <p class="hero-description">
+                        Electronics &amp; Computer Engineering student passionate
+                        about Web Development, Artificial Intelligence,
+                        Database Management and Cyber Security.
+                    </p>
 
+                    <div class="hero-buttons">
 
-    marquee.addEventListener("pointermove", function (event) {
+                        <a href="#projects"
+                            class="hero-btn hero-btn-primary">
+                            <i class="fas fa-code"></i>
+                            View Projects
+                        </a>
 
-        if (!isDragging) return;
+                        <a href="#contact-section"
+                            class="hero-btn hero-btn-outline">
+                            <i class="fas fa-envelope"></i>
+                            Contact Me
+                        </a>
 
-        currentX = event.clientX;
+                    </div>
 
-        const distance = currentX - startX;
+                </div>
 
-        track.style.transform =
-            `translateX(calc(-50% + ${distance}px))`;
+            </div>
 
-    });
+        </div>
 
-
-    marquee.addEventListener("pointerup", function () {
-
-        isDragging = false;
-
-        track.style.removeProperty("transform");
-
-        track.style.removeProperty("animation-play-state");
-
-    });
-
-
-    marquee.addEventListener("pointercancel", function () {
-
-        isDragging = false;
-
-        track.style.removeProperty("transform");
-
-        track.style.removeProperty("animation-play-state");
-
-    });
-
-})();
-
-</style>
-
-
-  </head>
-  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
-	  
-	  
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Rohan Bodkhe</a>
-	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
-
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav nav ml-auto">
-	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
-	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
-	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
-	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
-	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
-	  <section id="home-section" class="hero">
-		  <div class="home-slider  owl-carousel">
-	       <div class="slider-item ">
-	      	<div class="overlay"></div>
-	         <div class="container">
-	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
-	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/bg_1.png);">
-	          	 <div class="overlay"></div>
-	          	</div>
-		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
-		          	<div class="text">
-		          		<span class="subheading">Hello!</span>
-			            <h1 class="mb-4 mt-3">I'm <span>Rohan Bodkhe</span></h1>
-
-						<!-- Element to contain animated typing -->
-						<span id="typing-animation"></span>
-
-						<script>
-
-						// Initialize the typing animation
-						const typingAnimationElement = document.getElementById('typing-animation');
-
-						// Create an array of typing text
-						const typingTexts = [
-						'Engineering student  ',
-						'web designer  ',
-						];
-
-						// Create a function to display the typing animation for a given text
-						function playTypingAnimation(text) {
-						// Loop through each character and add it to the element
-						for (let i = 0; i < text.length; i++) {
-							setTimeout(() => {
-							typingAnimationElement.textContent += text[i];
-							}, i * 200); // Increase the delay to slow down the typing animation
-						}
-
-						// Once the animation is complete, reset the text and start over
-						setTimeout(() => {
-							typingAnimationElement.textContent = '';
-							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
-						}, text.length * 200);
-						}
-
-						// Start the typing animation loop
-						playTypingAnimation(typingTexts[0]);
-
-						</script>
-
-						<br>
-						<br>
-			            <h2>A Full stack Developer</h2>
-						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 1 years of experience</h2> -->
-						<!-- <br> -->
-			            <p><a href="https://www.instagram.com/itz_rohan7823/" class="btn btn-primary py-3 px-4">Instagram</a> 
-							<a href="https://www.excellencecoachingclasses.com" class="btn btn-white btn-outline-white py-3 px-4">My works</a></p>
-		            </div>
-		          </div>
-	        	</div>
-	        </div>
-	      </div>
-		</div>
     </section>
 
 
+    <!-- =====================================================
+         ABOUT
+    ===================================================== -->
 
-    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
-    	<div class="container">
-			<div class="row">
-				<div class="row d-flex align-items-stretch">
-				<!-- <div class="row d-flex"> -->
-					<div class="col-md-6 col-lg-5 d-flex">
-						<div class="img-about img d-flex align-items-stretch">
-							<div class="overlay">
-								<div class="row">
-									<div class="col-sm-6 col-md-5">
-									  <div class="about-img">
-										<img src="images/about-me.png" class="img-fluid rounded b-shadow-a" alt="">
-									  </div>
-									</div>
-									<!-- Details next to profile image -->
-									<div class="col-sm-6 col-md-7">
-									  <div class="about-info">
-										<p><span class="title-s">Name: </span> <span>Rohan Bodkhe</span></p>
-										<p><span class="title-s"> Role: </span> <span>web designer</span></p>
-										<!-- <p><span class="title-s">Experience: </span> <span>fresher </span></p> -->
-										<p><span class="title-s">Address: </span> <span>chh.sambhajinagar, India</span></p>
-									  </div>
-									</div>
-								  </div>
+    <section id="about-section"
+        class="about-mf section-padding">
 
-								<div class="skill-mf">
-									<p class="title-s">Skills</p>
-									<span>Full stack Development </span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>PYTHON</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>C programming</span> <span class="pull-right">90%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>DBMS</span> <span class="pull-right">85%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-									
-									<span>DSA</span> <span class="pull-right">70%</span>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="70" aria-valuemin="0"
-											aria-valuemax="100"></div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-					
-					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
-						<div class="row justify-content-start pb-3">
-							<div class="col-md-12 heading-section ftco-animate">
-								
-								<h1 class="big">About</h1>
-								<h2 class="mb-4">About Me</h2>
-								
-								<p>I am Rohan Santosh Bodkhe, a passionate engineering student currently pursuing my B.Tech at MIT College, Chhatrapati Sambhaji Nagar. 
-									I'm dedicated to learning, especially in areas like Python programming and web/app development.
-									 My goal is to become a successful engineer and build innovative solutions that make a positive impact.</p>
-								<ul class="about-info mt-4 px-md-0 px-2">
-									<li class="d-flex"><span>Profile:</span> <span>Web Development&amp; Data Science</span></li>
-									<li class="d-flex"><span>Domain:</span> <span>Web Development, Cyber security, Data Analyst &amp; Digital Marketing</span></li>
-									<li class="d-flex"><span>Education:</span> <span>Bachelor of Technology</span></li>
-									<li class="d-flex"><span>Language:</span> <span>English, Hindi,Marathi</span></li>
-									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Looker &amp; Tableau</span></li>
-									<li class="d-flex"><span>Other Skills:</span> <span>Cloud, Excel, Git &amp; SEO</span></li>
-									<li class="d-flex"><span>Interest:</span> <span>Traveling, Travel Photography, coding</span></li>
-									
-								</ul>
-							</div>
-						</div>
+        <div class="container">
 
+            <div class="section-heading text-center">
 
-						<div class="counter-wrap ftco-animate d-flex mt-md-3">
-							<div class="text">
-								<p class="mb-4">
-									<span class="number" data-number="2">0</span> <span>+</span>
-									<span>&NA; Projects completed</span>
-								</p>
-								<p><a href="https://www.linkedin.com/in/rohan-bodkhe-4476bb326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
-    </section>
+                <span class="section-subtitle">
+                    ABOUT ME
+                </span>
 
-
-
-	
-    <section class="ftco-section ftco-no-pb" id="resume-section">
-    	<div class="container">
-    		<div class="row justify-content-center pb-5">
-          <div class="col-md-10 heading-section text-center ftco-animate">
-          	<h1 class="big big-2">Resume</h1>
-            <h2 class="mb-4">Resume</h2>
-<p>
-    Aspiring Web Developer with a strong academic foundation in Electronics
-    and Computer Engineering and hands-on experience in Python, data handling,
-    and analytical thinking. Passionate about transforming raw data into
-    meaningful insights to support smarter decision-making.
-</p>
-
-<div class="resume-buttons mt-4">
-
-    <!-- View Resume -->
-    <a
-        href="https://drive.google.com/file/d/19B8l4QGaLan7nCgmCgDwNtIbBuEgJA-j/view?usp=drivesdk"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="resume-btn resume-view-btn"
-    >
-        <span class="icon-eye"></span>
-        View Resume
-    </a>
-
-    <!-- Download Resume -->
-    <a
-        href="https://drive.google.com/uc?export=download&id=19B8l4QGaLan7nCgmCgDwNtIbBuEgJA-j"
-        class="resume-btn resume-download-btn"
-    >
-        <span class="icon-download"></span>
-        Download Resume
-    </a>
-
-</div>
-          </div>
-        </div>
-
-	<!-- ================= EDUCATION JOURNEY ================= -->
-
-<div class="row">
-    <h1 class="big-4">Education Journey</h1>
-    <div class="underline"></div>
-</div>
-
-<br>
-
-<div class="education-timeline">
-
-    <!-- B.TECH -->
-    <div class="education-item ftco-animate">
-        <div class="education-dot"></div>
-
-        <div class="education-card">
-
-            <span class="education-date">2024 – 2028</span>
-
-            <h2>Bachelor of Technology</h2>
-
-            <h3>
-                Electronics &amp; Computer Engineering
-            </h3>
-
-            <span class="education-institute">
-                Maharashtra Institute of Technology (MIT CSN),
-                Chh. Sambhajinagar
-            </span>
-
-            <div class="education-details">
+                <h2>
+                    About <span>Me</span>
+                </h2>
 
                 <p>
-                    <strong>Current Year:</strong> Third Year
-                </p>
-
-                <p>
-                    <strong>First Year CGPA:</strong> 8.83 / 10
-                </p>
-
-                <p>
-                    <strong>Second Year CGPA:</strong> 8.88 / 10
-                </p>
-
-                <p>
-                    <strong>Minor:</strong> Double Minor in Cyber Security
+                    Get to know more about my education, skills and interests.
                 </p>
 
             </div>
 
-        </div>
-    </div>
 
+            <div class="box-shadow-full">
 
-    <!-- HSC -->
-    <div class="education-item ftco-animate">
-        <div class="education-dot"></div>
+                <div class="row">
 
-        <div class="education-card">
+                    <div class="col-md-5">
 
-            <span class="education-date">2024</span>
+                        <div class="about-img text-center mb-4">
 
-            <h2>Higher Secondary Certificate (HSC)</h2>
+                            <!-- Replace with your actual profile image -->
+                            <img src="images/about-me.png"
+                                alt="Rohan Santosh Bodkhe"
+                                onerror="this.style.display='none';">
 
-            <span class="education-institute">
-                Nath Jr. College, Galle Borgoan,
-                Chhatrapati Sambhajinagar
-            </span>
-
-            <div class="education-details">
-
-                <p>
-                    <strong>Board:</strong>
-                    Maharashtra State Board of Secondary
-                    and Higher Secondary Education, Pune
-                </p>
-
-                <p>
-                    <strong>Percentage:</strong> 74.33%
-                </p>
-
-            </div>
-
-        </div>
-    </div>
-
-
-    <!-- SSC -->
-    <div class="education-item ftco-animate">
-        <div class="education-dot"></div>
-
-        <div class="education-card">
-
-            <span class="education-date">2022</span>
-
-            <h2>Secondary School Certificate (SSC)</h2>
-
-            <span class="education-institute">
-                G.S.V.M. Ellora,
-                Chhatrapati Sambhajinagar
-            </span>
-
-            <div class="education-details">
-
-                <p>
-                    <strong>Board:</strong>
-                    Maharashtra State Board of Secondary
-                    and Higher Secondary Education, Pune
-                </p>
-
-                <p>
-                    <strong>Percentage:</strong> 81.80%
-                </p>
-
-            </div>
-
-        </div>
-    </div>
-
-</div>
-
-
-<!-- ================= END EDUCATION JOURNEY ================= -->
-<!-- ==================== PROJECTS SECTION ==================== -->
-<section id="projects" class="projects-section">
-    <div class="container-fluid">
-
-        <div class="section-heading text-center">
-            <span class="section-subtitle">MY WORK</span>
-            <h2>Featured <span>Projects</span></h2>
-            <p>Some of the projects I have designed and developed.</p>
-        </div>
-
-        <div class="projects-marquee">
-
-            <div class="projects-track" id="projectsTrack">
-
-                <!-- PROJECT 1 -->
-                <article class="project-card">
-                    <div class="project-image">
-                        <img
-                            src="https://i.ibb.co/KcQW43MS/file-000000008e208211adee4feadc2d798d.png"
-                            alt="Bachat Gat Management System"
-                            loading="lazy"
-                        >
-                    </div>
-
-                    <div class="project-content">
-                        <span class="project-number">01</span>
-                        <h3>Mahila Bachat Gat Management System</h3>
-                        <p>
-                            Digital management system for managing bachat gat
-                            members, savings, loans, interest and group records.
-                        </p>
-
-                        <div class="project-tags">
-                            <span>Web App</span>
-                            <span>Management</span>
-                            <span>Database</span>
                         </div>
 
-                        <a
-                            href="https://tuljabhavani1.vercel.app/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-btn"
-                        >
-                            View Project
-                            <i class="bi bi-arrow-up-right"></i>
-                        </a>
-                    </div>
-                </article>
+                        <div class="about-info">
 
+                            <p>
+                                <span class="title-s">Name: </span>
+                                <span>Rohan Santosh Bodkhe</span>
+                            </p>
 
-                <!-- PROJECT 2 -->
-                <article class="project-card">
-                    <div class="project-image">
-                        <img
-                            src="https://i.ibb.co/hRcZs7w6/file-0000000030808211a2458b9a4957a45b.png"
-                            alt="Gurukrupa Lodging Website"
-                            loading="lazy"
-                        >
-                    </div>
+                            <p>
+                                <span class="title-s">Education: </span>
+                                <span>B.Tech Electronics &amp; Computer Engineering</span>
+                            </p>
 
-                    <div class="project-content">
-                        <span class="project-number">02</span>
-                        <h3>Gurukrupa Lodging Website</h3>
-                        <p>
-                            Responsive lodging website showcasing rooms,
-                            facilities, services and booking information.
-                        </p>
+                            <p>
+                                <span class="title-s">College: </span>
+                                <span>MIT CSN, Chhatrapati Sambhajinagar</span>
+                            </p>
 
-                        <div class="project-tags">
-                            <span>Web Design</span>
-                            <span>Responsive</span>
-                            <span>Booking</span>
+                            <p>
+                                <span class="title-s">Profile: </span>
+                                <span>Web Development &amp; Data Science</span>
+                            </p>
+
+                            <p>
+                                <span class="title-s">Languages: </span>
+                                <span>English, Hindi, Marathi</span>
+                            </p>
+
                         </div>
 
-                        <a
-                            href="https://gurukrupalodging.vercel.app/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-btn"
-                        >
-                            View Project
-                            <i class="bi bi-arrow-up-right"></i>
-                        </a>
-                    </div>
-                </article>
-
-
-                <!-- PROJECT 3 -->
-                <article class="project-card">
-                    <div class="project-image">
-                        <img
-                            src="https://i.ibb.co/7dpVv31j/file-000000002f0882088013e7425d749c9a.png"
-                            alt="AttendEase Management System"
-                            loading="lazy"
-                        >
                     </div>
 
-                    <div class="project-content">
-                        <span class="project-number">03</span>
-                        <h3>AttendEase Management System</h3>
+
+                    <div class="col-md-7">
+
+                        <h3>
+                            Electronics &amp; Computer Engineering Student
+                        </h3>
+
                         <p>
-                            Attendance management platform with role-based
-                            access, tracking, dashboards, courses and reports.
+                            I am a B.Tech student at Maharashtra Institute
+                            of Technology, Chhatrapati Sambhajinagar,
+                            specializing in Electronics &amp; Computer
+                            Engineering.
                         </p>
 
-                        <div class="project-tags">
-                            <span>Management</span>
-                            <span>RBAC</span>
-                            <span>Reports</span>
-                        </div>
-
-                        <a
-                            href="https://demor-lmsc-seven.vercel.app/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-btn"
-                        >
-                            View Project
-                            <i class="bi bi-arrow-up-right"></i>
-                        </a>
-                    </div>
-                </article>
-
-
-                <!-- PROJECT 4 -->
-                <article class="project-card">
-                    <div class="project-image">
-                        <img
-                            src="https://i.ibb.co/SwWyQNNj/file-00000000db308211a84bd553331c8f28.png"
-                            alt="Paryantan-X Smart Trip Planner"
-                            loading="lazy"
-                        >
-                    </div>
-
-                    <div class="project-content">
-                        <span class="project-number">04</span>
-                        <h3>Paryantan-X Smart Trip Planner</h3>
                         <p>
-                            AI-powered tourism and trip-planning platform for
-                            personalized itineraries based on travel needs.
+                            I am interested in developing practical software
+                            solutions using Web Development, Python,
+                            databases and modern technologies.
                         </p>
 
-                        <div class="project-tags">
-                            <span>AI</span>
-                            <span>Travel</span>
-                            <span>Smart Planner</span>
-                        </div>
-
-                        <!-- Replace href with your existing Paryantan-X URL -->
-                        <a
-                            href="#"
-                            class="project-btn"
-                            onclick="return false;"
-                        >
-                            View Project
-                            <i class="bi bi-arrow-up-right"></i>
-                        </a>
-                    </div>
-                </article>
-
-
-                <!-- PROJECT 5 -->
-                <article class="project-card">
-                    <div class="project-image project-external-image">
-                        <!-- Replace this with your PUBLIC external image URL -->
-                        <img
-                            src="YOUR_CHINCHOLI_EXTERNAL_IMAGE_URL"
-                            alt="Chincholi Village Website"
-                            loading="lazy"
-                        >
-                    </div>
-
-                    <div class="project-content">
-                        <span class="project-number">05</span>
-                        <h3>Chincholi Village Website</h3>
                         <p>
-                            Digital village website providing information about
-                            Chincholi, culture, places, services and announcements.
+                            I am also pursuing a Double Minor in Cyber Security
+                            and continuously improving my technical and
+                            problem-solving skills.
                         </p>
 
-                        <div class="project-tags">
+
+                        <div class="skill-mf mt-4">
+
+                            <p class="title-s">
+                                Skills
+                            </p>
+
                             <span>Web Development</span>
-                            <span>Village Portal</span>
-                            <span>Responsive</span>
+                            <span class="pull-right">95%</span>
+
+                            <div class="progress">
+                                <div class="progress-bar"
+                                    role="progressbar"
+                                    style="width:95%">
+                                </div>
+                            </div>
+
+
+                            <span>Python</span>
+                            <span class="pull-right">85%</span>
+
+                            <div class="progress">
+                                <div class="progress-bar"
+                                    role="progressbar"
+                                    style="width:85%">
+                                </div>
+                            </div>
+
+
+                            <span>C Programming</span>
+                            <span class="pull-right">90%</span>
+
+                            <div class="progress">
+                                <div class="progress-bar"
+                                    role="progressbar"
+                                    style="width:90%">
+                                </div>
+                            </div>
+
+
+                            <span>Statistical Analysis</span>
+                            <span class="pull-right">85%</span>
+
+                            <div class="progress">
+                                <div class="progress-bar"
+                                    role="progressbar"
+                                    style="width:85%">
+                                </div>
+                            </div>
+
+
+                            <span>Machine Learning</span>
+                            <span class="pull-right">80%</span>
+
+                            <div class="progress">
+                                <div class="progress-bar"
+                                    role="progressbar"
+                                    style="width:80%">
+                                </div>
+                            </div>
+
                         </div>
 
-                        <a
-                            href="https://chincholi.vercel.app/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-btn"
-                        >
-                            View Project
-                            <i class="bi bi-arrow-up-right"></i>
-                        </a>
-                    </div>
-                </article>
-
-
-                <!-- PROJECT 6 -->
-                <article class="project-card">
-                    <div class="project-image project-external-image">
-                        <!-- Replace this with your PUBLIC external image URL -->
-                        <img
-                            src="YOUR_DAIRYFLOW_EXTERNAL_IMAGE_URL"
-                            alt="Dairy Flow Milk Management System"
-                            loading="lazy"
-                        >
                     </div>
 
-                    <div class="project-content">
-                        <span class="project-number">06</span>
-                        <h3>Dairy Flow – Milk Management System</h3>
-                        <p>
-                            Milk-management platform for dairy operations,
-                            milk records, customers, sales and reports.
-                        </p>
+                </div>
 
-                        <div class="project-tags">
-                            <span>Management</span>
-                            <span>Milk Records</span>
-                            <span>Dashboard</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         RESUME
+    ===================================================== -->
+
+    <section id="resume-section">
+
+        <div class="container">
+
+            <div class="section-heading text-center">
+
+                <span class="section-subtitle">
+                    MY RESUME
+                </span>
+
+                <h2>
+                    Resume
+                </h2>
+
+                <p>
+                    Aspiring Web Developer with a strong academic foundation
+                    in Electronics and Computer Engineering and hands-on
+                    experience in Python, data handling and analytical
+                    thinking.
+                </p>
+
+                <div class="resume-buttons mt-4">
+
+                    <a href="https://drive.google.com/file/d/19B8l4QGaLan7nCgmCgDwNtIbBuEgJA-j/view?usp=drivesdk"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="resume-btn resume-view-btn">
+
+                        <i class="fas fa-eye"></i>
+                        View Resume
+
+                    </a>
+
+
+                    <a href="https://drive.google.com/uc?export=download&id=19B8l4QGaLan7nCgmCgDwNtIbBuEgJA-j"
+                        class="resume-btn resume-download-btn">
+
+                        <i class="fas fa-download"></i>
+                        Download Resume
+
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- =================================================
+                 EDUCATION JOURNEY
+            ================================================= -->
+
+            <div class="row">
+
+                <div class="col-12">
+
+                    <div class="section-heading text-center">
+
+                        <span class="section-subtitle">
+                            ACADEMIC BACKGROUND
+                        </span>
+
+                        <h2>
+                            Education <span>Journey</span>
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div class="education-timeline">
+
+
+                <!-- B.TECH -->
+
+                <div class="education-item">
+
+                    <div class="education-dot"></div>
+
+                    <div class="education-card">
+
+                        <span class="education-date">
+                            2024 – 2028
+                        </span>
+
+                        <h2>
+                            Bachelor of Technology
+                        </h2>
+
+                        <h3>
+                            Electronics &amp; Computer Engineering
+                        </h3>
+
+                        <span class="education-institute">
+                            Maharashtra Institute of Technology (MIT CSN),
+                            Chhatrapati Sambhajinagar
+                        </span>
+
+                        <div class="education-details">
+
+                            <p>
+                                <strong>Current Year:</strong>
+                                Third Year
+                            </p>
+
+                            <p>
+                                <strong>First Year CGPA:</strong>
+                                8.83 / 10
+                            </p>
+
+                            <p>
+                                <strong>Second Year CGPA:</strong>
+                                8.88 / 10
+                            </p>
+
+                            <p>
+                                <strong>Minor:</strong>
+                                Double Minor in Cyber Security
+                            </p>
+
                         </div>
 
-                        <a
-                            href="https://dairyflow-eight.vercel.app/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-btn"
-                        >
-                            View Project
-                            <i class="bi bi-arrow-up-right"></i>
-                        </a>
-                    </div>
-                </article>
-
-
-                <!-- PROJECT 7 -->
-                <article class="project-card">
-                    <div class="project-image project-external-image">
-                        <!-- Replace this with your PUBLIC external image URL -->
-                        <img
-                            src="YOUR_EXAMVAULT_EXTERNAL_IMAGE_URL"
-                            alt="ExamVault Previous Year Papers"
-                            loading="lazy"
-                        >
                     </div>
 
-                    <div class="project-content">
-                        <span class="project-number">07</span>
-                        <h3>ExamVault – Previous Year Papers</h3>
-                        <p>
-                            Platform for engineering students to access and
-                            organize previous-year question papers.
-                        </p>
+                </div>
 
-                        <div class="project-tags">
-                            <span>Education</span>
-                            <span>Question Papers</span>
-                            <span>Web App</span>
+
+                <!-- HSC -->
+
+                <div class="education-item">
+
+                    <div class="education-dot"></div>
+
+                    <div class="education-card">
+
+                        <span class="education-date">
+                            2024
+                        </span>
+
+                        <h2>
+                            Higher Secondary Certificate (HSC)
+                        </h2>
+
+                        <span class="education-institute">
+                            Nath Jr. College, Galle Borgoan,
+                            Chhatrapati Sambhajinagar
+                        </span>
+
+                        <div class="education-details">
+
+                            <p>
+                                <strong>Board:</strong>
+                                Maharashtra State Board of Secondary and
+                                Higher Secondary Education, Pune
+                            </p>
+
+                            <p>
+                                <strong>Percentage:</strong>
+                                74.33%
+                            </p>
+
                         </div>
 
-                        <a
-                            href="https://examvalute.vercel.app/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-btn"
-                        >
-                            View Project
-                            <i class="bi bi-arrow-up-right"></i>
-                        </a>
-                    </div>
-                </article>
-
-
-                <!-- PROJECT 8 -->
-                <article class="project-card">
-                    <div class="project-image project-external-image">
-                        <!-- Replace this with your PUBLIC external image URL -->
-                        <img
-                            src="YOUR_SHONA_AI_EXTERNAL_IMAGE_URL"
-                            alt="Shona AI Assistant"
-                            loading="lazy"
-                        >
                     </div>
 
-                    <div class="project-content">
-                        <span class="project-number">08</span>
-                        <h3>Shona AI Assistant</h3>
-                        <p>
-                            AI-powered assistant designed for interactive
-                            conversations and intelligent assistance.
-                        </p>
+                </div>
 
-                        <div class="project-tags">
-                            <span>AI</span>
-                            <span>Assistant</span>
-                            <span>Web App</span>
+
+                <!-- SSC -->
+
+                <div class="education-item">
+
+                    <div class="education-dot"></div>
+
+                    <div class="education-card">
+
+                        <span class="education-date">
+                            2022
+                        </span>
+
+                        <h2>
+                            Secondary School Certificate (SSC)
+                        </h2>
+
+                        <span class="education-institute">
+                            G.S.V.M. Ellora,
+                            Chhatrapati Sambhajinagar
+                        </span>
+
+                        <div class="education-details">
+
+                            <p>
+                                <strong>Board:</strong>
+                                Maharashtra State Board of Secondary and
+                                Higher Secondary Education, Pune
+                            </p>
+
+                            <p>
+                                <strong>Percentage:</strong>
+                                81.80%
+                            </p>
+
                         </div>
 
-                        <a
-                            href="https://shona-ai.vercel.app/"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="project-btn"
-                        >
-                            View Project
-                            <i class="bi bi-arrow-up-right"></i>
-                        </a>
                     </div>
-                </article>
 
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =====================================================
+         PROJECTS
+         IMPORTANT: ID = projects
+    ===================================================== -->
+
+    <section id="projects"
+        class="projects-section">
+
+        <div class="container-fluid">
+
+            <div class="section-heading text-center">
+
+                <span class="section-subtitle">
+                    MY WORK
+                </span>
+
+                <h2>
+                    Featured <span>Projects</span>
+                </h2>
+
+                <p>
+                    Some of the projects I have designed and developed.
+                </p>
+
+            </div>
+
+
+            <div class="projects-marquee">
+
+                <div class="projects-track">
+
+
+                    <!-- PROJECT 1 -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img
+                                src="https://i.ibb.co/KcQW43MS/file-000000008e208211adee4feadc2d798d.png"
+                                alt="Bachat Gat Management System">
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3>
+                                Bachat Gat Management System
+                            </h3>
+
+                            <p>
+                                A digital management platform designed
+                                to manage Bachat Gat members, savings,
+                                loans, interest and records.
+                            </p>
+
+                            <div class="project-tags">
+
+                                <span>Web App</span>
+                                <span>Database</span>
+                                <span>Management</span>
+
+                            </div>
+
+                            <a href="https://tuljabhavani1.vercel.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-btn">
+
+                                <i class="fas fa-external-link-alt"></i>
+                                View Project
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 2 -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img
+                                src="https://i.ibb.co/hRcZs7w6/file-0000000030808211a2458b9a4957a45b.png"
+                                alt="Gurukrupa Lodge">
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3>
+                                Gurukrupa Lodging Website
+                            </h3>
+
+                            <p>
+                                A responsive lodging website providing
+                                information about rooms, facilities and
+                                accommodation services.
+                            </p>
+
+                            <div class="project-tags">
+
+                                <span>Web Development</span>
+                                <span>Responsive</span>
+                                <span>Booking</span>
+
+                            </div>
+
+                            <a href="https://gurukrupalodging.vercel.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-btn">
+
+                                <i class="fas fa-external-link-alt"></i>
+                                View Project
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 3 -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img
+                                src="https://i.ibb.co/7dpVv31j/file-000000002f0882088013e7425d749c9a.png"
+                                alt="AttendEase Management System">
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3>
+                                AttendEase Management System
+                            </h3>
+
+                            <p>
+                                A digital attendance management system
+                                with role-based access, dashboards,
+                                attendance tracking and reports.
+                            </p>
+
+                            <div class="project-tags">
+
+                                <span>Attendance</span>
+                                <span>Dashboard</span>
+                                <span>Firebase</span>
+
+                            </div>
+
+                            <a href="https://demor-lmsc-seven.vercel.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-btn">
+
+                                <i class="fas fa-external-link-alt"></i>
+                                View Project
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 4 -->
+
+                    <article class="project-card">
+
+                        <div class="project-image">
+
+                            <img
+                                src="https://i.ibb.co/SwWyQNNj/file-00000000db308211a84bd553331c8f28.png"
+                                alt="Paryantan X">
+
+                        </div>
+
+                        <div class="project-content">
+
+                            <h3>
+                                Paryantan-X Smart Trip Planner
+                            </h3>
+
+                            <p>
+                                A smart tourism platform focused on
+                                personalized trip planning, tourism
+                                discovery and travel assistance.
+                            </p>
+
+                            <div class="project-tags">
+
+                                <span>AI</span>
+                                <span>Travel</span>
+                                <span>Web App</span>
+
+                            </div>
+
+                            <!-- Replace href with your existing live
+                                 Paryantan-X URL if different -->
+
+                            <a href="#"
+                                class="project-btn">
+
+                                <i class="fas fa-external-link-alt"></i>
+                                View Project
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 5 -->
+
+                    <article class="project-card">
+
+                        <div class="project-content">
+
+                            <h3>
+                                Chincholi Village Website
+                            </h3>
+
+                            <p>
+                                A dedicated website designed to present
+                                information, identity and digital content
+                                related to Chincholi village.
+                            </p>
+
+                            <div class="project-tags">
+
+                                <span>Website</span>
+                                <span>Responsive</span>
+                                <span>Community</span>
+
+                            </div>
+
+                            <a href="https://chincholi.vercel.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-btn">
+
+                                <i class="fas fa-external-link-alt"></i>
+                                View Project
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 6 -->
+
+                    <article class="project-card">
+
+                        <div class="project-content">
+
+                            <h3>
+                                Dairy Flow – Milk Management System
+                            </h3>
+
+                            <p>
+                                A digital milk management platform designed
+                                to organize dairy operations, customers,
+                                owners and milk collection records.
+                            </p>
+
+                            <div class="project-tags">
+
+                                <span>Management</span>
+                                <span>Database</span>
+                                <span>Web App</span>
+
+                            </div>
+
+                            <a href="https://dairyflow-eight.vercel.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-btn">
+
+                                <i class="fas fa-external-link-alt"></i>
+                                View Project
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 7 -->
+
+                    <article class="project-card">
+
+                        <div class="project-content">
+
+                            <h3>
+                                ExamVault – Previous Year Papers
+                            </h3>
+
+                            <p>
+                                A digital platform for organizing and
+                                accessing previous year examination papers
+                                in a structured way.
+                            </p>
+
+                            <div class="project-tags">
+
+                                <span>Education</span>
+                                <span>Web App</span>
+                                <span>Resources</span>
+
+                            </div>
+
+                            <a href="https://examvalute.vercel.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-btn">
+
+                                <i class="fas fa-external-link-alt"></i>
+                                View Project
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                    <!-- PROJECT 8 -->
+
+                    <article class="project-card">
+
+                        <div class="project-content">
+
+                            <h3>
+                                Shona AI Assistant
+                            </h3>
+
+                            <p>
+                                An AI assistant web application created
+                                to provide an interactive conversational
+                                experience.
+                            </p>
+
+                            <div class="project-tags">
+
+                                <span>AI</span>
+                                <span>Assistant</span>
+                                <span>Web App</span>
+
+                            </div>
+
+                            <a href="https://shona-ai.vercel.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                class="project-btn">
+
+                                <i class="fas fa-external-link-alt"></i>
+                                View Project
+
+                            </a>
+
+                        </div>
+
+                    </article>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+<!-- ================= CONTACT SECTION ================= -->
+<section class="ftco-section contact-section" id="contact">
+    <div class="container">
+
+        <div class="row justify-content-center pb-5">
+            <div class="col-md-10 heading-section text-center ftco-animate">
+                <h1 class="big big-2">Contact</h1>
+                <h2 class="mb-4">Get In Touch</h2>
+                <p>
+                    Have a project, internship opportunity, or any professional
+                    enquiry? Feel free to send me a message.
+                </p>
             </div>
         </div>
 
+        <div class="row">
+
+            <!-- Contact Information -->
+            <div class="col-md-5 mb-5">
+                <div class="contact-info-card">
+
+                    <h3>Let's Connect</h3>
+
+                    <p>
+                        I am always open to discussing web development,
+                        software projects, internships and collaboration
+                        opportunities.
+                    </p>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <span class="icon-map-marker"></span>
+                        </div>
+                        <div>
+                            <span class="contact-label">Location</span>
+                            <p>Chhatrapati Sambhajinagar, Maharashtra, India</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <span class="icon-envelope"></span>
+                        </div>
+                        <div>
+                            <span class="contact-label">Email</span>
+                            <p>
+                                <a href="mailto:rohanbodkhe@gmail.com">
+                                    rohanbodkhe645@gmail.com
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-info-item">
+                        <div class="contact-icon">
+                            <span class="icon-link"></span>
+                        </div>
+                        <div>
+                            <span class="contact-label">Portfolio</span>
+                            <p>
+                                <a href="https://rohanbodkhe11.github.io/"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                    rohanbodkhe11.github.io
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="contact-socials">
+                        <a href="https://github.com/rohanbodkhe11"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            GitHub
+                        </a>
+
+                        <a href="https://www.linkedin.com/in/rohanbodkhe"
+                           target="_blank"
+                           rel="noopener noreferrer">
+                            LinkedIn
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+
+
+            <!-- Contact Form -->
+            <div class="col-md-7">
+                <div class="contact-form-card">
+
+                    <h3>Send Me a Message</h3>
+
+                    <!-- FormSubmit sends the form directly to your email -->
+                    <form action="https://formsubmit.co/rohanbodkhe645@gmail.com"
+                          method="POST">
+
+                        <!-- FormSubmit settings -->
+                        <input type="hidden" name="_subject"
+                               value="New Portfolio Contact Message">
+
+                        <input type="hidden" name="_template"
+                               value="table">
+
+                        <input type="hidden" name="_captcha"
+                               value="true">
+
+                        <input type="hidden" name="_next"
+                               value="https://rohanbodkhe11.github.io/#contact">
+
+                        <div class="row">
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="contact-name">Your Name</label>
+                                    <input type="text"
+                                           id="contact-name"
+                                           name="name"
+                                           class="form-control"
+                                           placeholder="Enter your name"
+                                           required>
+                                </div>
+                            </div>
+
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label for="contact-email">Your Email</label>
+                                    <input type="email"
+                                           id="contact-email"
+                                           name="email"
+                                           class="form-control"
+                                           placeholder="Enter your email"
+                                           required>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-subject">Subject</label>
+                            <input type="text"
+                                   id="contact-subject"
+                                   name="subject"
+                                   class="form-control"
+                                   placeholder="Enter subject"
+                                   required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="contact-message">Message</label>
+                            <textarea id="contact-message"
+                                      name="message"
+                                      class="form-control"
+                                      rows="6"
+                                      placeholder="Write your message..."
+                                      required></textarea>
+                        </div>
+
+                        <button type="submit" class="contact-submit-btn">
+                            <span class="icon-paper-plane"></span>
+                            Send Message
+                        </button>
+
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
     </div>
 </section>
- 
-<!-- ================= END PROJECTS SECTION ================= -->
+<!-- ================= END CONTACT SECTION ================= -->
 
-	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
-      <div class="container">
-		<div class="row d-md-flex align-items-center">
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="10">0</strong>
-                <span>Achievements</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="2">0</strong>
-                <span>Projects</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="NA">0</strong>
-                <span>Mentored Students</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
-            <div class="block-18">
-              <div class="text">
-                <strong class="number" data-number="2">1</strong>
-                <span>Cups of coffee</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-	
-	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/bg_1.jpg)">
-			<!-- <div class="container"> -->
-				<div class="row justify-content-center">
-					<div class="col-md-7 ftco-animate text-center">
-						<h2>More projects on<span> Github  </span> </h2>
-						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
-						<br>
-						<p><a href="https://github.com/rohanbodkhe11" class="btn btn-primary py-3 px-5">GitHub</a></p>
-						</div>
-					</div>
-				</div>
-			<!-- </div> -->
-		</div>
-	</section>
+    <!-- =====================================================
+         FOOTER
+    ===================================================== -->
 
+    <footer>
 
+        <div class="container">
 
-    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
-      <div class="container">
-      	<div class="row justify-content-center mb-5 pb-3">
-          <div class="col-md-7 heading-section text-center ftco-animate">
-            <h1 class="big big-2">Contact</h1>
-            <h2 class="mb-4">Contact Me</h2>
-            <p>Below are the details to reach out to me!</p>
-          </div>
+            <p>
+                © 2025 Rohan Santosh Bodkhe. All Rights Reserved.
+            </p>
+
         </div>
 
-        <div class="row d-flex contact-info mb-5">
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-map-signs"></span>
-          		</div>
-          		<h3 class="mb-4">Address</h3>
-	            <p>chh.sambhajinagar, India</p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-phone2"></span>
-          		</div>
-          		<h3 class="mb-4">Contact Number</h3>
-	            <p><a href="tel://7823890695">+ 7823890695</a></p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-paper-plane"></span>
-          		</div>
-          		<h3 class="mb-4">Email Address</h3>
-	            <p><a href="mailto:info@yoursite.com">rohanbodkhe645@gmail.com</a></p>
-	          </div>
-          </div>
-          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
-          	<div class="align-self-stretch box p-4 text-center">
-          		<div class="icon d-flex align-items-center justify-content-center">
-          			<span class="icon-globe"></span>
-          		</div>
-          		<h3 class="mb-4">Download Resume</h3>
-	            <p><a href="https://drive.google.com/file/d/19B8l4QGaLan7nCgmCgDwNtIbBuEgJA-j/view?usp=drivesdk">resumelink</a></p>
-	          </div>
-          </div>
-
-		  <div class="container">
-			<br>
-			<br>
-			<div class="row justify-content-center">
-				<!-- <div class="col-md-7 ftco-animate text-center">
-					<h2>Have a<span> Question?  </span> <a href="https://forms.gle/" class="btn btn-primary py-3 px-5">Click Here</a> </h2>
-				</div> -->
-			</div>
-				<br>
-					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
-					  <li class="ftco-animate normal-txt">Find me on  </li>
-					  <!-- <li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial"><span class="icon-youtube"></span></a></li> -->
-					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/rohan-bodkhe-4476bb326?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><span class="icon-linkedin"></span></a></li>  
-					  <li class="ftco-animate"><a href="https://www.facebook.com/share/158j98dDxQ8/"><span class="icon-twitter"></span></a></li>
-					  <li class="ftco-animate"><a href="https://www.facebook.com/share/158j98dDxQ8/"><span class="icon-facebook"></span></a></li>
-				      <li class="ftco-animate"><a href="https://www.instagram.com/itz_rohan7823/"><span class="icon-instagram"></span></a></li>
-					</ul>
-				<br>
-		   </div>
-   </div>
- </section>
+    </footer>
 
 
- 
-	
-    <footer class="ftco-footer ftco-section">
-		<div class="container">
-		  <div class="row">
-			<div class="col-md-12 text-center">
-  
-			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Rohan bodkhe</a>
-	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-			</div>
-		  </div>
-		</div>
-	  </footer>
+    <!-- =====================================================
+         SCRIPTS
+    ===================================================== -->
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js">
+    </script>
 
 
-  <!-- loader -->
-  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+    <script>
+
+        /* =====================================================
+           TYPING ANIMATION
+        ===================================================== */
+
+        const typingElement =
+            document.getElementById("typing-animation");
+
+        const typingTexts = [
+            "Engineering Student",
+            "Web Developer",
+            "AI Enthusiast",
+            "Cyber Security Enthusiast"
+        ];
+
+        let textIndex = 0;
+        let charIndex = 0;
+        let deleting = false;
+
+        function typeEffect() {
+
+            const currentText = typingTexts[textIndex];
+
+            if (!deleting) {
+
+                typingElement.textContent =
+                    currentText.substring(0, charIndex + 1);
+
+                charIndex++;
+
+                if (charIndex === currentText.length) {
+
+                    deleting = true;
+
+                    setTimeout(typeEffect, 1400);
+
+                    return;
+                }
+
+            } else {
+
+                typingElement.textContent =
+                    currentText.substring(0, charIndex - 1);
+
+                charIndex--;
+
+                if (charIndex === 0) {
+
+                    deleting = false;
+
+                    textIndex =
+                        (textIndex + 1) % typingTexts.length;
+
+                }
+
+            }
+
+            setTimeout(
+                typeEffect,
+                deleting ? 50 : 90
+            );
+        }
+
+        typeEffect();
 
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  
-  <script src="js/main.js"></script>
-    
-  </body>
+        /* =====================================================
+           CLOSE MOBILE NAVBAR AFTER CLICK
+        ===================================================== */
+
+        $(".navbar-nav .nav-link").on("click", function () {
+
+            $(".navbar-collapse").collapse("hide");
+
+        });
+
+
+        /* =====================================================
+           SMOOTH SCROLL
+        ===================================================== */
+
+        $('a[href^="#"]').on("click", function (event) {
+
+            const target =
+                $(this.getAttribute("href"));
+
+            if (target.length) {
+
+                event.preventDefault();
+
+                $("html, body").animate({
+
+                    scrollTop:
+                        target.offset().top - 65
+
+                }, 700);
+
+            }
+
+        });
+
+    </script>
+<script>
+    document.getElementById("footer-year").textContent =
+        new Date().getFullYear();
+</script>
+
+</body>
+
 </html>
